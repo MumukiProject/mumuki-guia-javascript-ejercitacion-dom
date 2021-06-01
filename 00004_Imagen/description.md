@@ -5,3 +5,5 @@ Hacer un programa que al iniciarse pregunte mediante un `prompt` por un tamaño 
 | chica | 200px
 | mediana | 500px
 | grande | 800px
+
+Vamos a crear una página
