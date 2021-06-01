@@ -1,10 +1,6 @@
-En un documento `html` hacer un post de una red social que contenga:
+Queremos hacer un programa para una red social que al iniciarse pregunte mediante tres `prompt`s por la cantidad de cada una de las reacciones y actualice los valores de los spans correspondientes.
+Para ello previamente en un documento `html` haremos un post que contenga:
+
 - un `h3` con la usuaria
 - un `p` con un `lorem ipsum`
-- 3 `spans` de reacciones con un ícono (por ejemplo `Me gusta`, `Me encanta`, `Me asombra`) más un número con la cantidad
-
-Dar estilos para que
-- la tipografía sea `Poppins` de Google Fonts;
-- los `spans` estén en línea, separados con márgenes, tengan un color de fondo gris suave y un border radius
-
-Hacer un programa que al iniciarse pregunte mediante tres `prompt`s por la cantidad de cada una de las reacciones y actualice los valores de los spans correspondientes
+- 3 `spans` de reacciones con un ícono ([Me gusta] (https://fontawesome.com/v5.15/icons/thumbs-up?style=solid), [Me encanta] (https://fontawesome.com/v5.15/icons/heart?style=regular), [Me asombra] (https://fontawesome.com/v5.15/icons/surprise?style=regular) ) más un número con la cantidad.
