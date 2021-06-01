@@ -1,10 +1,14 @@
-Hacer un programa que al iniciarse pregunte mediante `prompt`s por 
-- un título
-- una url de una imagen 
-- una url a un artículo 
+Necesitamos hacer un programa para completar los datos de una card, para ello el mismo al iniciar debe pedir mediante `prompt`s por:
 
-Utilizar esos datos para completar en el `html` una card que tenga 
-- una imagen, con la url de la imagen ingresada 
-- un título, con el texto del título ingresado
-- un link que diga `Leer más`, con la url al artículo ingresado
+- un título;
+- una url de una imagen;
+- una url a un artículo.
 
+Previamente en `html` haremos una card que tenga:
+
+- una clase `card`;
+- una imagen, con la url de la imagen ingresada;
+- un título, con el texto del título ingresado;
+- un link que diga `Leer más`, con la url al artículo ingresado.
+
+> Creá el código HTML y JavaScript que acabamos de describir, el CSS te lo dejamos de regalo :gift:
