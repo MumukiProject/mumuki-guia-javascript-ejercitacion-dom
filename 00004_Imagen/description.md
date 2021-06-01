@@ -1,4 +1,4 @@
-Hacer un programa que al iniciarse pregunte mediante un `prompt` por un tamaño de imagen (siendo las opciones posibles `chica`, `mediana` y `grande`) y dependiendo de la opción elegida modifique el tamaño de una imagen (cualquiera) en el documento html. Por ejemplo:
+Queremos crear una página que nos permita modificar el tamaño de una imagen que fue agregada previamente en el documento HTML. Para ello se debe poder ingresar mediante un `prompt` alguna de las opciones posibles (`chica`, `mediana` y `grande`) y dependiendo de la opción elegida modifique el tamaño de una imagen . Por ejemplo:
 
 | Opción elegida | Ancho de imagen |
 | --- | --- | 
@@ -6,4 +6,4 @@ Hacer un programa que al iniciarse pregunte mediante un `prompt` por un tamaño 
 | mediana | 500px
 | grande | 800px
 
-Vamos a crear una página
+> Creá el código HTML y JavaScript que acabamos de describir.
