@@ -1,9 +1,6 @@
 /*<output#*//*#output>*/
 /*<tests#*///FIJARSE SI FUNCIONA LO DEL BORDER RADIUS 
-// hay tres span con un ícono e inicialmente tienen 0 reacciones.
 //los span tienen un border radius
-
-//Si ingresamos 1 2 6 los span se actualizan mostrando esas reacciones.
 
 //Si ingresamos 44 8 24 los span se actualizan mostrando esas reacciones.
 
@@ -57,6 +54,17 @@ beforeEach(() => {
     document.querySelectorAll("span")[0].should.have.trimmed.text("1");
     document.querySelectorAll("span")[1].should.have.trimmed.text("2");
     document.querySelectorAll("span")[2].should.have.trimmed.text("6");
+  });
+  
+  it("Si ingresamos 44 8 24 los span se actualizan mostrando esas reacciones", function() {
+    _stubPromptResponse_(44);
+    _stubPromptResponse_(8);
+    _stubPromptResponse_(24);
+    _resetDocument_();
+    
+    document.querySelectorAll("span")[0].should.have.trimmed.text("44");
+    document.querySelectorAll("span")[1].should.have.trimmed.text("8");
+    document.querySelectorAll("span")[2].should.have.trimmed.text("24");
   });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
