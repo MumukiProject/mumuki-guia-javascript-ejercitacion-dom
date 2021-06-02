@@ -6,5 +6,4 @@ Queremos hacer una barra de progreso, para ello crearemos un programa que al ini
 dentro de ese `div` otro con el identificador `barra`;
 * el porcentaje de la barra debe estar entre `0%` y `100%`.
 
-
 > Creá el código HTML y JavaScript que acabamos de describir.
