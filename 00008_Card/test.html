@@ -22,7 +22,7 @@ beforeEach(() => {
   })
   
   it("La card tiene un link que dice Leer más", () => {
-    document.querySelectorAll("card a").should.have.trimmed.text("Leer más");
+    document.querySelector("a").should.have.trimmed.text("Leer más");
   })
 
 /*#tests>*/
