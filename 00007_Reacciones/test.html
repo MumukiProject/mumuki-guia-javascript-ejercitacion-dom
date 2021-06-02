@@ -20,13 +20,13 @@ beforeEach(() => {
   })
   
   it("Hay un span con el ícono Me gusta e inicialmente tiene 0 reacciones", () => {
-    document.querySelector("span i[class='fas fa-thumbs-up']").should.exist;
+    document.querySelectorAll("span i[class='fas fa-thumbs-up']").should.exist;
     //document.querySelector("span i[class='fas fa-thumbs-up']").should.have.trimmed.text("0");
   })
   
   it("La tipografía del texto es Poppins", () => {
     document.querySelector("p").should.have.style('font-family', 'Poppins');
-    document.querySelector("h").should.have.style('font-family', 'Poppins');
+    document.querySelector("h3").should.have.style('font-family', 'Poppins');
   })
   
   it("Los span están en línea", () => {
