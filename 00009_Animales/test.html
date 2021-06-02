@@ -10,7 +10,13 @@ let tortuga;
 let vizcacha;
 
 beforeEach(() => {
-
+  _resetDocument_();
+  
+  hipopotamo = document.createElement('img');
+  tortuga = document.createElement('img');
+  vizcacha = document.createElement('img');
+  
+ 
 });
 
 it("Hay tres imágenes", () => {
