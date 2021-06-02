@@ -4,4 +4,4 @@ Las opciones posibles para `data-continente` son:
 * `América`;
 * `Asia`;
 * `Europa`;
-* `Oceanía`;
+* `Oceanía`.
