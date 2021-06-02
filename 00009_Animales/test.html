@@ -2,47 +2,46 @@
 /*<tests#*///si ingresamos el primer animal por el prompt se muestra solo ese animal
 //si ingresamos el segundo animal en el propt se muestra solo ese animal.
 //si ingresamos el tercer animal en el propt se muestra solo ese animal.
-
-
-
-let imagenes;
-
-beforeEach(() => {
-  _resetUserInteractions_();
-  imagenes = document.querySelectorAll('img');
-});
-
-it("Hay tres imágenes", () => {
-  document.querySelectorAll("img").length.should.eql(3);
-});
-
-it("Todas las imágenes tienen el atributo data-animal", () => {
-  imagenes[0].should.have.attr('data-animal');
-  imagenes[1].should.have.attr('data-animal');
-  imagenes[2].should.have.attr('data-animal');
-});
-
-it("La card tiene un título h1", () => {
-  document.querySelectorAll("card h1").should.exist;
-});
+describe("", function() {
+  context("", () => {
+    describe("", () => {
+      let imagenes;
+      beforeEach(() => {
+        _resetUserInteractions_();
+         imagenes = document.querySelectorAll('img');
+      });
+      
+      it("Hay tres imágenes", () => {
+        document.querySelectorAll("img").length.should.eql(3);
+      });
+      
+      it("Todas las imágenes tienen el atributo data-animal", () => {
+        imagenes[0].should.have.attr('data-animal');
+        imagenes[1].should.have.attr('data-animal');
+        imagenes[2].should.have.attr('data-animal');
+      });
+      
+      it("La card tiene un título h1", () => {
+        document.querySelectorAll("card h1").should.exist;
+      });
   
-it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
-  let primerData = imagenes[0].getAttribute('data-animal');
-  _stubPromptResponse_("tigre");
-  _resetDocument_();
-  
-  imagenes[0].should.be.visible;
-  imagenes[1].should.not.be.visible;
-  imagenes[2].should.not.be.visible;
-});
-
-it("prueba 1", () => {
-  let primerData = imagenes[0].getAttribute('data-animal');
-  _stubPromptResponse_(primerData);
-  _resetDocument_();
-  
-  primerData.should.eql("algo");
-});
+      it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
+        let primerData = imagenes[0].getAttribute('data-animal');
+        _stubPromptResponse_(primerData);
+        _resetDocument_();
+        
+        imagenes[0].should.be.visible;
+        imagenes[1].should.not.be.visible;
+        imagenes[2].should.not.be.visible;
+      });
+      
+      /*it("prueba 1", () => {
+        let primerData = imagenes[0].getAttribute('data-animal');
+        _stubPromptResponse_(primerData);
+        _resetDocument_();
+        
+        primerData.should.eql("algo");
+      });*/
 
 
 /*it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
