@@ -1,6 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*///Si ingresamos una imagen, la misma se muestra en la card
-//Si ingresamos un link, se corresponde con el link de la card.
+/*<tests#*///Si ingresamos un link, se corresponde con el link de la card.
 
 beforeEach(() => {
   _resetUserInteractions_();
@@ -39,6 +38,16 @@ beforeEach(() => {
     
     let imagenEnHTML = document.querySelector('img').getAttribute('src');
     imagenEnHTML.should.eql('https://www.soft-data.com/Gestor/DigitalNews//img/publicaciones/2020/02/16/alta/12894.jpg');
+  })
+  
+  it("Si ingresamos un link se corresponde con el link de la card", () => {
+    _stubPromptResponse_('Eterno resplandor de una mente sin recuerdos');
+    _stubPromptResponse_('https://www.soft-data.com/Gestor/DigitalNews//img/publicaciones/2020/02/16/alta/12894.jpg');
+    _stubPromptResponse_('https://es.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind');
+    _resetDocument_();
+    
+    let linkEnHTML = document.querySelector('a').getAttribute('href');
+    linkEnHTML.should.eql('https://es.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind');
   })
 
 /*#tests>*/
