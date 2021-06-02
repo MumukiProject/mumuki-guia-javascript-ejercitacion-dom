@@ -11,14 +11,14 @@ let vizcacha;
 
 beforeEach(() => {
   _resetDocument_();
-  
+  let firstImage = document.querySelectorAll('img')[0];
   hipopotamo = document.createElement('img');
   tortuga = document.createElement('img');
   vizcacha = document.createElement('img');
   
-  document.body.appendChild(hipopotamo);
-  document.body.appendChild(tortuga);
-  document.body.appendChild(vizcacha);
+  document.body.insertBefore(hipopotamo, firstImage);
+  document.body.insertBefore(tortuga, firstImage);
+  document.body.insertBefore(vizcacha, firstImage);
   
   hipopotamo.setAttribute('data-animal','hipopotamo');
   tortuga.setAttribute('data-animal','tortuga');
