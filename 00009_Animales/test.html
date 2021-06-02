@@ -28,34 +28,30 @@ it("La card tiene un título h1", () => {
   
 it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
   let primerData = imagenes[0].getAttribute('data-animal');
-  _stubPromptResponse_('hipopotamo');
+  _stubPromptResponse_(primerData);
   _resetDocument_();
   
-  primerData.should.eql("perro");
-  /*hipopotamo.should.be.visible;
-  tortuga.should.not.be.visible;
-  vizcacha.should.not.be.visible;*/
+  imagenes[0].should.be.visible;
+  imagenes[1].should.not.be.visible;
+  imagenes[2].should.not.be.visible;
 });
 
 it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
-  _stubPromptResponse_('tortuga');
+  let segundoData = imagenes[1].getAttribute('data-animal');
+  _stubPromptResponse_(segundoData);
 
-  hipopotamo.should.not.be.visible;
-  tortuga.should.be.visible;
-  vizcacha.should.not.be.visible;
+  imagenes[0].should.not.be.visible;
+  imagenes[1].should.be.visible;
+  imagenes[2].should.not.be.visible;
 });
 
 it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
-  _stubPromptResponse_('vizcacha');
+  let tercerData = imagenes[2].getAttribute('data-animal');
+  _stubPromptResponse_(tercerData);
 
-  hipopotamo.should.not.be.visible;
-  tortuga.should.not.be.visible;
-  vizcacha.should.be.visible;
-});
-
-it("prueba", () => {
-  document.querySelectorAll('img')[0].should.have.attr('data-animal', 'perro');
-});
-/*#tests>*/
+  imagenes[0].should.not.be.visible;
+  imagenes[1].should.not.be.visible;
+  imagenes[2].should.be.visible;
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
