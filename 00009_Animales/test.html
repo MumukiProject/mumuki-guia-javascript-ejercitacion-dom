@@ -47,6 +47,24 @@ it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", ()
   tortuga.should.not.be.visible;
   vizcacha.should.not.be.visible;
 });
+
+it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
+  _stubPromptResponse_('tortuga');
+  _resetDocument_();
+    
+  hipopotamo.not.should.be.visible;
+  tortuga.should.be.visible;
+  vizcacha.should.not.be.visible;
+});
+
+it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
+  _stubPromptResponse_('vizcacha');
+  _resetDocument_();
+    
+  hipopotamo.should.not.be.visible;
+  tortuga.should.not.be.visible;
+  vizcacha.should.be.visible;
+});
 /*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
