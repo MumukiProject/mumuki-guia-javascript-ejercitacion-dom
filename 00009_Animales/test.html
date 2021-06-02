@@ -13,7 +13,7 @@ beforeEach(() => {
 });
 
 it("Hay tres imágenes", () => {
-  _originalDocument_.querySelectorAll("img").length.should.eql(3);
+  document.querySelectorAll("img").length.should.eql(3);
 });
 
 it("Todas las imágenes tienen el atributo data-animal", () => {
@@ -36,7 +36,7 @@ it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", ()
   imagenes[2].should.not.be.visible;
 });
 
-it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
+/*it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
   let segundoData = imagenes[1].getAttribute('data-animal');
   _stubPromptResponse_(segundoData);
   _resetDocument_();
@@ -54,6 +54,6 @@ it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", ()
   imagenes[0].should.not.be.visible;
   imagenes[1].should.not.be.visible;
   imagenes[2].should.be.visible;
-});/*#tests>*/
+});*//*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
