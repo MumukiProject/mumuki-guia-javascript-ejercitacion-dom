@@ -1,12 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/// Hay un div con el id contenedor
-// Hay un div con el id barra
-// Si ingresamos 25 la barra se carga en un 25%
-// Si ingresamos 80 la barra se carga en un 80%
-// Si ingresamos 101 la barra se carga en un 100%
-// Si ingresamos -10 la barra se carga en un 0%
-
-beforeEach(() => {
+/*<tests#*/beforeEach(() => {
   _resetUserInteractions_();
 })
 
@@ -44,14 +37,6 @@ beforeEach(() => {
     _resetDocument_();
     
     document.getElementById('barra').should.have.style('width', '0%');
-  });
-  
-
-  
-
-
-  
-  
-/*#tests>*/
+  });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
