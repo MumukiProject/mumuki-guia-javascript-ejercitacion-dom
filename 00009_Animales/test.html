@@ -41,7 +41,7 @@ it("prueba 1", () => {
   _stubPromptResponse_(primerData);
   _resetDocument_();
   
-  imagenes[0].sarasa.should.eql('algo');
+  imagenes[0].getAttribute('sarasa').should.eql('algo');
 });
 
 it("prueba 2", () => {
@@ -49,7 +49,7 @@ it("prueba 2", () => {
   _stubPromptResponse_(primerData);
   _resetDocument_();
   
-  imagenes[0].pedido.should.eql('algo');
+  imagenes[0].getAttribute('pedido').should.eql('algo');
 });
 
 
