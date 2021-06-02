@@ -2,7 +2,9 @@ Queremos hacer una barra de progreso, para ello crearemos un programa que al ini
 
 :warning: Consideraciones:
 
-El documento HTML debe tener una barra de progreso representada con un div que tenga como identificador `contenedor` y
-dentro de ese div otro con el identificador `barra`.
+* el documento HTML debe tener una barra de progreso representada con un `div` que tenga como identificador `contenedor` y
+dentro de ese `div` otro con el identificador `barra`;
+* el porcentaje de la barra debe estar entre `0%` y `100%`.
+
 
 > Creá el código HTML y JavaScript que acabamos de describir.
