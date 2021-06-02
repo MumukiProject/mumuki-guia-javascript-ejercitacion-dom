@@ -67,6 +67,7 @@ it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", ()
 });
 
 it("prueba", () => {
+  _resetDocument_();
   document.querySelectorAll('img')[0].should.have.attr('data-animal', 'perro');
 });
 /*#tests>*/
