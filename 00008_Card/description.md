@@ -1,6 +1,6 @@
 Necesitamos hacer un programa para completar los datos de una card, para ello al iniciar el mismo debe pedir mediante `prompt`s por:
 
-- un título;
+- un título `h1`;
 - una url de una imagen;
 - una url a un artículo.
 
