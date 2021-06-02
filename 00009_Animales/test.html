@@ -25,30 +25,29 @@ describe("", function() {
         img3.setAttribute('data-categoria','vizcacha');
       });
 
-          it("Hay tres imágenes", () => {
-            document.querySelectorAll("img").length.should.eql(3);
-          })
-          
-          it("Todas las imágenes tienen el atributo data-animal", () => {
-            document.querySelectorAll('img')[0].should.have.attr('data-animal');
-            document.querySelectorAll('img')[1].should.have.attr('data-animal');
-            document.querySelectorAll('img')[2].should.have.attr('data-animal');
-        
-          })
-          
-          it("La card tiene un título h1", () => {
-            document.querySelectorAll("card h1").should.exist;
-          })
-            
-          it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
-            _stubPromptResponse_('hipopotamo');
-            _resetDocument_();
-              
-            hipopotamo.should.be.visible;
-            tortuga.should.not.be.visible;
-            vizcacha.should.not.be.visible;
-            })
+      it("Hay tres imágenes", () => {
+        document.querySelectorAll("img").length.should.eql(3);
+      })
+      
+      it("Todas las imágenes tienen el atributo data-animal", () => {
+        document.querySelectorAll('img')[0].should.have.attr('data-animal');
+        document.querySelectorAll('img')[1].should.have.attr('data-animal');
+        document.querySelectorAll('img')[2].should.have.attr('data-animal');
     
+      })
+      
+      it("La card tiene un título h1", () => {
+        document.querySelectorAll("card h1").should.exist;
+      })
+        
+      it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
+        _stubPromptResponse_('hipopotamo');
+        _resetDocument_();
+          
+        hipopotamo.should.be.visible;
+        tortuga.should.not.be.visible;
+        vizcacha.should.not.be.visible;
+        })
     });
   });  
 });
