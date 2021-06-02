@@ -10,4 +10,4 @@ Para ello previamente en un documento HTML haremos un post que contenga:
 - la tipografía debe ser `Poppins` de Google Fonts;
 - los `spans` deben estar en línea, separados con márgenes de `15px`, tener un color de fondo gris suave y un border radius.
 
-> 
+> Creá el código HTML y JavaScript que acabamos de describir.
