@@ -29,10 +29,13 @@ beforeEach(() => {
     document.querySelectorAll("h1")[0].should.have.trimmed.text("Eterno resplandor de una mente sin recuerdos");
   })
   
-  /*it("Si ingresamos un link, el mismo se muestra en la card", () => {
-    _stubPromptResponse_('Soy un título');
-    document.querySelector("h1").should.have.trimmed.text("Soy un título");
-  })*/
+  it("Si ingresamos una imagen se muestra en la card", () => {
+    _stubPromptResponse_('Eterno resplandor de una mente sin recuerdos');
+    let imagen = _stubPromptResponse_('https://www.soft-data.com/Gestor/DigitalNews//img/publicaciones/2020/02/16/alta/12894.jpg');
+    _stubPromptResponse_('https://es.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind');
+    let imagenEnHTML = document.querySelector('img').getAttribute('src');
+    imagen.should.eql(imagenEnHTML);
+  })
 
 /*#tests>*/
 /*<options#*/output_ignore_scripts: true
