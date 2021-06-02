@@ -5,24 +5,11 @@
 
 
 
-let hipopotamo;
-let tortuga;
-let vizcacha;
+let imagenes;
 
 beforeEach(() => {
-  /*_resetDocument_();
-  let firstImage = document.querySelectorAll('img')[0];
-  hipopotamo = document.createElement('img');
-  tortuga = document.createElement('img');
-  vizcacha = document.createElement('img');
-  
-  document.body.insertBefore(hipopotamo, firstImage);
-  document.body.insertBefore(tortuga, firstImage);
-  document.body.insertBefore(vizcacha, firstImage);
-  
-  hipopotamo.setAttribute('data-animal','hipopotamo');
-  tortuga.setAttribute('data-animal','tortuga');
-  vizcacha.setAttribute('data-animal','vizcacha');*/
+  _resetDocument_();
+  imagenes = document.querySelectorAll('img');
 });
 
 it("Hay tres imágenes", () => {
@@ -30,9 +17,9 @@ it("Hay tres imágenes", () => {
 });
 
 it("Todas las imágenes tienen el atributo data-animal", () => {
-  document.querySelectorAll('img')[0].should.have.attr('data-animal');
-  document.querySelectorAll('img')[1].should.have.attr('data-animal');
-  document.querySelectorAll('img')[2].should.have.attr('data-animal');
+  imagenes[0].should.have.attr('data-animal');
+  imagenes[1].should.have.attr('data-animal');
+  imagenes[2].should.have.attr('data-animal');
 });
 
 it("La card tiene un título h1", () => {
@@ -41,21 +28,9 @@ it("La card tiene un título h1", () => {
   
 it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
   _stubPromptResponse_('hipopotamo');
-  let firstImage = document.querySelectorAll('img')[0];
-  hipopotamo = document.createElement('img');
-  tortuga = document.createElement('img');
-  vizcacha = document.createElement('img');
-  
-  hipopotamo.setAttribute('data-animal','hipopotamo');
-  tortuga.setAttribute('data-animal','tortuga');
-  vizcacha.setAttribute('data-animal','vizcacha');
-  
-  document.body.insertBefore(hipopotamo, firstImage);
-  document.body.insertBefore(tortuga, firstImage);
-  document.body.insertBefore(vizcacha, firstImage);
+  _resetDocument_();
   
   
-
   hipopotamo.should.be.visible;
   tortuga.should.not.be.visible;
   vizcacha.should.not.be.visible;
