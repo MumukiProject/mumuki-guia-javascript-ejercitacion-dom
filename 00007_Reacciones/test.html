@@ -21,7 +21,7 @@ beforeEach(() => {
   
   it("Hay un span con el ícono Me gusta e inicialmente tiene 0 reacciones", () => {
     document.querySelectorAll("span i[class='fas fa-thumbs-up']").should.exist;
-    //document.querySelector("span i[class='fas fa-thumbs-up']").should.have.trimmed.text("0");
+    document.querySelectorAll("span i[class='fas fa-thumbs-up']").should.have.trimmed.text("0");
   })
   
   it("La tipografía del texto es Poppins", () => {
