@@ -1,7 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/// la card tiene una imagen
-// la card tiene un título
-// la card tiene un link que dice Leer mas
+/*<tests#*/// la card tiene un link que dice Leer mas
 
 //Si ingresamos una imagen, la misma se muestra en la card.
 //Si ingresamos un título, el mismo se muestra en la card.
@@ -17,6 +15,10 @@ beforeEach(() => {
   
   it("La card tiene una imagen", () => {
     document.querySelectorAll("card img").should.exist;
+  })
+  
+  it("La card tiene un título h1", () => {
+    document.querySelectorAll("card h1").should.exist;
   })
 
 /*#tests>*/
