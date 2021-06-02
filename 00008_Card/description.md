@@ -11,4 +11,4 @@ Previamente en un documento HTML haremos una card que tenga:
 - un título, con el texto del título ingresado;
 - un link que diga `Leer más`, con la url al artículo ingresado.
 
-> Creá el código HTML y JavaScript que acabamos de describir, el CSS te lo dejamos de regalo :gift:
+> Creá el código HTML y JavaScript que acabamos de describir, el CSS te lo dejamos de regalo. :gift:
