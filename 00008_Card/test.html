@@ -33,12 +33,12 @@ beforeEach(() => {
   
   it("Si ingresamos una imagen se muestra en la card", () => {
     _stubPromptResponse_('Eterno resplandor de una mente sin recuerdos');
-    let imagen = _stubPromptResponse_('https://www.soft-data.com/Gestor/DigitalNews//img/publicaciones/2020/02/16/alta/12894.jpg');
+    _stubPromptResponse_('https://www.soft-data.com/Gestor/DigitalNews//img/publicaciones/2020/02/16/alta/12894.jpg');
     _stubPromptResponse_('https://es.wikipedia.org/wiki/Eternal_Sunshine_of_the_Spotless_Mind');
     _resetDocument_();
     
     let imagenEnHTML = document.querySelector('img').getAttribute('src');
-    imagenEnHTML.should.eql(imagen);
+    imagenEnHTML.should.eql('https://www.soft-data.com/Gestor/DigitalNews//img/publicaciones/2020/02/16/alta/12894.jpg');
   })
 
 /*#tests>*/
