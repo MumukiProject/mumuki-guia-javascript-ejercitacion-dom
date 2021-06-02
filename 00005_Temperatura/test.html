@@ -18,52 +18,52 @@ beforeEach(() => {
     document.querySelector("h1").should.exist;
   })
 
-  it("Si ingresamos -15 el color del título es azul y muestra Temperatura actual: -15°", function() {
+  it("Si ingresamos -15 el color del título es azul y muestra Temperatura actual: -15º", function() {
     _stubPromptResponse_(-15);
     _resetDocument_();
     
     document.querySelector('h1').should.have.style('color', 'rgb(0, 0, 255)');
-    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: -15°");
+    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: -15º");
   });
   
-  it("Si ingresamos 0 el color del título es celeste y muestra Temperatura actual: 0°", function() {
+  it("Si ingresamos 0 el color del título es celeste y muestra Temperatura actual: 0º", function() {
     _stubPromptResponse_(0);
     _resetDocument_();
     
     document.querySelector('h1').should.have.style('color', 'rgb(0, 170, 228)');
-    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 0°");
+    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 0º");
   });
   
-  it("Si ingresamos 24 el color del título es verde y muestra Temperatura actual: 24°", function() {
+  it("Si ingresamos 24 el color del título es verde y muestra Temperatura actual: 24º", function() {
     _stubPromptResponse_(24);
     _resetDocument_();
     
     document.querySelector('h1').should.have.style('color', 'rgb(0, 255, 0)');
-    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 24°");
+    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 24º");
   });
   
-  it("Si ingresamos 29 el color del título es amarillo y muestra Temperatura actual: 29°", function() {
+  it("Si ingresamos 29 el color del título es amarillo y muestra Temperatura actual: 29º", function() {
     _stubPromptResponse_(29);
     _resetDocument_();
     
     document.querySelector('h1').should.have.style('color', 'rgb(255, 255, 0)');
-    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 29°");
+    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 29º");
   });
   
-  it("Si ingresamos 30 el color del título es naranja y muestra Temperatura actual: 30° rgb 255, 128, 0", function() {
+  it("Si ingresamos 30 el color del título es naranja y muestra Temperatura actual: 30º rgb 255, 128, 0", function() {
     _stubPromptResponse_(30);
     _resetDocument_();
     
     document.querySelector('h1').should.have.style('color', 'rgb(255, 128, 0)');
-    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 30°");
+    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 30º");
   });
   
-  it("Si ingresamos 35 el color del título es rojo y muestra Temperatura actual: 35°", function() {
+  it("Si ingresamos 35 el color del título es rojo y muestra Temperatura actual: 35º", function() {
     _stubPromptResponse_(35);
     _resetDocument_();
     
     document.querySelector('h1').should.have.style('color', 'rgb(255, 0, 0)');
-    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 35°");
+    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 35º");
   });
   
 
