@@ -9,7 +9,7 @@ let hipopotamo;
 let tortuga;
 let vizcacha;
 
-/*beforeEach(() => {
+beforeEach(() => {
   _resetDocument_();
   
   hipopotamo = document.createElement('img');
@@ -21,9 +21,9 @@ let vizcacha;
   document.body.appendChild(vizcacha);
   
   img1.setAttribute('data-animal','hipopotamo');
-  img2.setAttribute('data-categoria','tortuga');
-  img3.setAttribute('data-categoria','vizcacha');
-});*/
+  img2.setAttribute('data-animal','tortuga');
+  img3.setAttribute('data-animal','vizcacha');
+});
 
 it("Hay tres imágenes", () => {
   document.querySelectorAll("img").length.should.eql(8);
