@@ -31,6 +31,8 @@ describe("", function() {
         _resetDocument_();
         
         document.querySelectorAll('img')[0].should.have.style('visibility', 'visible');
+        document.querySelectorAll('img')[1].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');
         /*imagenes[0].should.be.visible;
         imagenes[1].should.not.be.visible;
         imagenes[2].should.not.be.visible;*/
