@@ -33,42 +33,30 @@ describe("", function() {
         document.querySelectorAll('img')[0].should.have.style('visibility', 'visible');
         document.querySelectorAll('img')[1].should.have.style('visibility', 'hidden');
         document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');
-        /*imagenes[0].should.be.visible;
-        imagenes[1].should.not.be.visible;
-        imagenes[2].should.not.be.visible;*/
       });
+      
+      it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
+        let segundoData = imagenes[1].getAttribute('data-animal');
+        _stubPromptResponse_(segundoData);
+        _resetDocument_();
+        
+        imagenes[0].should.not.be.visible;
+        imagenes[1].should.be.visible;
+        imagenes[2].should.not.be.visible;
+      });
+      
+      it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
+        let tercerData = imagenes[2].getAttribute('data-animal');
+        _stubPromptResponse_(tercerData);
+        _resetDocument_();
+        
+        imagenes[0].should.not.be.visible;
+        imagenes[1].should.not.be.visible;
+        imagenes[2].should.be.visible;
+      })
       
     });
   });  
-});
-      
-      /*it("prueba 1", () => {
-        let primerData = imagenes[0].getAttribute('data-animal');
-        _stubPromptResponse_(primerData);
-        _resetDocument_();
-        
-        primerData.should.eql("algo");
-      });*/
-
-
-/*it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
-  let segundoData = imagenes[1].getAttribute('data-animal');
-  _stubPromptResponse_(segundoData);
-  _resetDocument_();
-  
-  imagenes[0].should.not.be.visible;
-  imagenes[1].should.be.visible;
-  imagenes[2].should.not.be.visible;
-});
-
-it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
-  let tercerData = imagenes[2].getAttribute('data-animal');
-  _stubPromptResponse_(tercerData);
-  _resetDocument_();
-  
-  imagenes[0].should.not.be.visible;
-  imagenes[1].should.not.be.visible;
-  imagenes[2].should.be.visible;
-});*//*#tests>*/
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
