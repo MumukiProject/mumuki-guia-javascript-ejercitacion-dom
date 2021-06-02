@@ -29,7 +29,6 @@ it("La card tiene un título h1", () => {
 it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
   let primerData = imagenes[0].getAttribute('data-animal');
   _stubPromptResponse_(primerData);
-  _resetDocument_();
   
   imagenes[0].should.be.visible;
   imagenes[1].should.not.be.visible;
