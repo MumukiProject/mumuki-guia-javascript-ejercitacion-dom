@@ -41,7 +41,7 @@ it("prueba 1", () => {
   _stubPromptResponse_(primerData);
   _resetDocument_();
   
-  imagenes[0].getAttribute('iguales').should.eql(false);
+  primerData.should.eql("algo");
 });
 
 
