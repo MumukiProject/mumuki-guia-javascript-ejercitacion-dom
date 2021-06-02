@@ -25,7 +25,7 @@ beforeEach(() => {
   
   it("Si ingresamos un título, el mismo se muestra en la card", () => {
     _stubPromptResponse_('Soy un título');
-    document.querySelectorAll("card h1").should.have.trimmed.text("Soy un título");
+    document.querySelector("h1").should.have.trimmed.text("Soy un título");
   })
 
 /*#tests>*/
