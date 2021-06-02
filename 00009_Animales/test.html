@@ -1,8 +1,58 @@
 /*<output#*//*#output>*/
-/*<tests#*///hay tres imágenes
-//todas las imágenes tienen data-animal
-//si ingresamos el primer animal por el prompt se muestra solo ese animal
+/*<tests#*///si ingresamos el primer animal por el prompt se muestra solo ese animal
 //si ingresamos el segundo animal en el propt se muestra solo ese animal.
-//si ingresamos el tercer animal en el propt se muestra solo ese animal./*#tests>*/
+//si ingresamos el tercer animal en el propt se muestra solo ese animal.
+
+describe("", function() {
+  context("", () => {
+    describe("", () => {
+      let hipopotamo;
+      let tortuga;
+      let vizcacha:
+      beforeEach(() => {
+        _resetDocument_();
+        
+        hipopotamo = document.createElement('img');
+        tortuga = document.createElement('img');
+        vizcacha = document.createElement('img');
+        
+        document.body.appendChild(hipopotamo);
+        document.body.appendChild(tortuga);
+        document.body.appendChild(vizcacha);
+        
+        img1.setAttribute('data-animal','hipopotamo');
+        img2.setAttribute('data-categoria','tortuga');
+        img3.setAttribute('data-categoria','vizcacha');
+      });
+
+          it("Hay tres imágenes", () => {
+            document.querySelectorAll("img").length.should.eql(3);
+          })
+          
+          it("Todas las imágenes tienen el atributo data-animal", () => {
+            document.querySelectorAll('img')[0].should.have.attr('data-animal');
+            document.querySelectorAll('img')[1].should.have.attr('data-animal');
+            document.querySelectorAll('img')[2].should.have.attr('data-animal');
+        
+          })
+          
+          it("La card tiene un título h1", () => {
+            document.querySelectorAll("card h1").should.exist;
+          })
+            
+          it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
+            _stubPromptResponse_('hipopotamo');
+            _resetDocument_();
+              
+            hipopotamo.should.be.visible;
+            tortuga.should.not.be.visible;
+            vizcacha.should.not.be.visible;
+            })
+    
+    });
+  });  
+});
+
+/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
