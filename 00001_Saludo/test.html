@@ -1,6 +1,5 @@
 /*<output#*//*#output>*/
 /*<tests#*/// que esté centrado;
-//si ingresamos Tereshkova que muestre Hola Tereshkova. Te damos la bienvenida
 
 beforeEach(() => {
   _resetUserInteractions_();
@@ -24,6 +23,14 @@ beforeEach(() => {
     _resetDocument_();
     
     document.querySelector('h1').should.have.trimmed.text("Hola Ada. Te damos la bienvenida");
+  });
+  
+  it("Si ingresamos Tereshkova, el título h1 muestra Hola Tereshkova. Te damos la bienvenida", function() {
+    _stubPromptResponse_('Tereshkova');
+
+    _resetDocument_();
+    
+    document.querySelector('h1').should.have.trimmed.text("Hola Tereshkova. Te damos la bienvenida");
   });
   
   
