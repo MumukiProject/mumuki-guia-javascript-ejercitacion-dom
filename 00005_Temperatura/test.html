@@ -5,11 +5,11 @@
 
 // si ingresamos 24 el color del título es verde y muestra Temperatura actual: -24° rgb 0, 255, 0
 
-// si ingresamos 29 el color del título es amarillo y muestra Temperatura actual: 29° rgb 255, 255, 0
+// Si ingresamos 29 el color del título es amarillo y muestra Temperatura actual: 29° rgb 255, 255, 0
 
-// si ingresamos 30 el color del título es naranja y muestra Temperatura actual: 30° rgb 255, 128, 0
+// Si ingresamos 30 el color del título es naranja y muestra Temperatura actual: 30° rgb 255, 128, 0
 
-// si ingresamos 35 el color del título es rojo y muestra Temperatura actual: 35° rgb 255, 0, 0
+// Si ingresamos 35 el color del título es rojo y muestra Temperatura actual: 35° rgb 255, 0, 0
 
 beforeEach(() => {
   _resetUserInteractions_();
@@ -40,6 +40,30 @@ beforeEach(() => {
     
     document.querySelector('h1').should.have.style('color', 'rgb (0, 255, 0)');
     document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 24°");
+  });
+  
+  it("Si ingresamos 29 el color del título es amarillo y muestra Temperatura actual: 29°", function() {
+    _stubPromptResponse_(29);
+    _resetDocument_();
+    
+    document.querySelector('h1').should.have.style('color', 'rgb (255, 255, 0)');
+    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 29°");
+  });
+  
+  it("Si ingresamos 30 el color del título es naranja y muestra Temperatura actual: 30° rgb 255, 128, 0", function() {
+    _stubPromptResponse_(30);
+    _resetDocument_();
+    
+    document.querySelector('h1').should.have.style('color', 'rgb (255, 128, 0)');
+    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 30°");
+  });
+  
+  it("Si ingresamos 35 el color del título es rojo y muestra Temperatura actual: 35°", function() {
+    _stubPromptResponse_(35);
+    _resetDocument_();
+    
+    document.querySelector('h1').should.have.style('color', 'rgb (255, 0, 0)');
+    document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 35°");
   });
   
 
