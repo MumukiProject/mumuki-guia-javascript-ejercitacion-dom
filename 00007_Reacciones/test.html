@@ -1,16 +1,55 @@
 /*<output#*//*#output>*/
 /*<tests#*///FIJARSE SI FUNCIONA LO DEL BORDER RADIUS 
-//hay un titulo h3
-// hay un p
 // hay tres span con un ícono e inicialmente tienen 0 reacciones.
-//la tipografía es Poppins
-//los span estan en linea
-//los span están separados con márgenes
 //los span tienen un border radius
 
 //Si ingresamos 1 2 6 los span se actualizan mostrando esas reacciones.
 
 //Si ingresamos 44 8 24 los span se actualizan mostrando esas reacciones.
-/*#tests>*/
+
+beforeEach(() => {
+  _resetUserInteractions_();
+})
+
+  it("Hay un título h3", () => {
+    document.querySelector("h3").should.exist;
+  })
+  
+  it("Hay un párrafo", () => {
+    document.querySelector("p").should.exist;
+  })
+  
+  it("Hay un span con el ícono Me gusta e inicialmente tiene 0 reacciones", () => {
+    document.querySelector("span i[class='fas fa-thumbs-up']").should.exist;
+    document.querySelector("span i[class='fas fa-thumbs-up']").should.have.trimmed.text("0");
+  })
+  
+  it("La tipografía del texto es Poppins", () => {
+    document.querySelector("p").should.have.style('font-family', 'Poppins');
+    document.querySelector("h").should.have.style('font-family', 'Poppins');
+  })
+  
+  it("Los span están en línea", () => {
+    document.querySelector("span").should.have.style('display', 'inline');
+  })
+  
+  it("Los span tienen un margen de 15px", () => {
+    document.querySelector("span").should.have.style('margin', '15px');
+  })
+  
+  it("Los span tienen color #D3D3D3", () => {
+    document.querySelector("span").should.have.style('color', 'rgb(211,211,211)');
+  })
+
+  it("Si ingresamos 1 2 6 los span se actualizan mostrando esas reacciones", function() {
+    _stubPromptResponse_(1);
+    _stubPromptResponse_(2);
+    _stubPromptResponse_(6);
+    _resetDocument_();
+    
+    document.querySelectorAll('span')[0].should.have.trimmed.text("1");
+    document.querySelectorAll('span')[0].should.have.trimmed.text("2");
+    document.querySelectorAll('span')[0].should.have.trimmed.text("6");
+  });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
