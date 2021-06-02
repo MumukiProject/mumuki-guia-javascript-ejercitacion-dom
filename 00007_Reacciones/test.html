@@ -21,17 +21,17 @@ beforeEach(() => {
   
   it("Hay un span con el ícono Me gusta e inicialmente tiene 0 reacciones", () => {
     document.querySelectorAll("span i[class='fas fa-thumbs-up']").should.exist;
-    document.querySelectorAll("span")[0].should.have.trimmed.text("0");
+    document.querySelectorAll("span")[0].should.have.trimmed.text(0);
   })
   
   it("Hay un span con el ícono Me encanta e inicialmente tiene 0 reacciones", () => {
     document.querySelectorAll("span i[class='far fa-heart']").should.exist;
-    document.querySelectorAll("span")[1].should.have.trimmed.text("0");
+    document.querySelectorAll("span")[1].should.have.trimmed.text(0);
   })
   
   it("Hay un span con el ícono Me asombra e inicialmente tiene 0 reacciones", () => {
     document.querySelectorAll("span i[class='far fa-surprise']").should.exist;
-    document.querySelectorAll("span")[2].should.have.trimmed.text("0");
+    document.querySelectorAll("span")[2].should.have.trimmed.text(0);
   })
   
   it("La tipografía del texto es Poppins", () => {
