@@ -65,6 +65,10 @@ it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", ()
   tortuga.should.not.be.visible;
   vizcacha.should.be.visible;
 });
+
+it("prueba", () => {
+  document.querySelectorAll('img')[0].should.have.attr('data-animal', 'perro');
+});
 /*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
