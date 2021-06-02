@@ -4,7 +4,7 @@ Necesitamos hacer un programa para completar los datos de una card, para ello al
 - una url de una imagen;
 - una url a un artículo.
 
-Previamente en `html` haremos una card que tenga:
+Previamente en un documento HTML haremos una card que tenga:
 
 - una clase `card`;
 - una imagen, con la url de la imagen ingresada;

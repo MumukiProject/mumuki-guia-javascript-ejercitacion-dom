@@ -1,4 +1,4 @@
-Necesitamos hacer un programa que al iniciarse pregunte mediante un `prompt` por una temperatura, y con ese dato modifique un `h1` en el `html`, de forma tal que diga, por ejemplo, `Temperatura actual: 20°`y cambie el color siguiendo la siguiente tabla:
+Necesitamos hacer un programa que al iniciarse pregunte mediante un `prompt` por una temperatura, y con ese dato modifique un `h1` en el documento HTML, de forma tal que diga, por ejemplo, `Temperatura actual: 20°`y cambie el color siguiendo la siguiente tabla:
 
 | Temperatura | Color |
 | --- | --- | 
