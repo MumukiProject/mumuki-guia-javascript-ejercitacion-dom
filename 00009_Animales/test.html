@@ -41,8 +41,7 @@ it("La card tiene un título h1", () => {
   
 it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
   _stubPromptResponse_('hipopotamo');
-  _resetDocument_();
-    
+
   hipopotamo.should.be.visible;
   tortuga.should.not.be.visible;
   vizcacha.should.not.be.visible;
@@ -50,8 +49,7 @@ it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", ()
 
 it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
   _stubPromptResponse_('tortuga');
-  _resetDocument_();
-    
+
   hipopotamo.should.not.be.visible;
   tortuga.should.be.visible;
   vizcacha.should.not.be.visible;
@@ -59,15 +57,13 @@ it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", (
 
 it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
   _stubPromptResponse_('vizcacha');
-  _resetDocument_();
-    
+
   hipopotamo.should.not.be.visible;
   tortuga.should.not.be.visible;
   vizcacha.should.be.visible;
 });
 
 it("prueba", () => {
-  _resetDocument_();
   document.querySelectorAll('img')[0].should.have.attr('data-animal', 'perro');
 });
 /*#tests>*/
