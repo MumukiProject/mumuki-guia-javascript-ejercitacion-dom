@@ -1,4 +1,4 @@
-Necesitamos hacer un programa para completar los datos de una card, para ello el mismo al iniciar debe pedir mediante `prompt`s por:
+Necesitamos hacer un programa para completar los datos de una card, para ello al iniciar el mismo debe pedir mediante `prompt`s por:
 
 - un título;
 - una url de una imagen;
