@@ -1,6 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*///Si ingresamos una imagen, la misma se muestra en la card.
-//Si ingresamos un título, el mismo se muestra en la card.
+/*<tests#*///Si ingresamos una imagen, la misma se muestra en la card
 //Si ingresamos un link, se corresponde con el link de la card.
 
 beforeEach(() => {
@@ -24,9 +23,14 @@ beforeEach(() => {
   })
   
   it("Si ingresamos un título, el mismo se muestra en la card", () => {
+    _stubPromptResponse_('Eterno resplandor de una mente sin recuerdos');
+    document.querySelectorAll("h1")[0].should.have.trimmed.text("Eterno resplandor de una mente sin recuerdos");
+  })
+  
+  /*it("Si ingresamos un link, el mismo se muestra en la card", () => {
     _stubPromptResponse_('Soy un título');
     document.querySelector("h1").should.have.trimmed.text("Soy un título");
-  })
+  })*/
 
 /*#tests>*/
 /*<options#*/output_ignore_scripts: true
