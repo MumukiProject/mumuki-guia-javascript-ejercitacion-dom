@@ -20,6 +20,10 @@ beforeEach(() => {
   it("La card tiene un título h1", () => {
     document.querySelectorAll("card h1").should.exist;
   })
+  
+  it("La card tiene un link que dice Leer más", () => {
+    document.querySelectorAll("card h1").should.have.trimmed.text("Leer más");
+  })
 
 /*#tests>*/
 /*<options#*/output_ignore_scripts: true
