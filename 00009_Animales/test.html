@@ -47,13 +47,15 @@ it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", ()
   tortuga = document.createElement('img');
   vizcacha = document.createElement('img');
   
+  hipopotamo.setAttribute('data-animal','hipopotamo');
+  tortuga.setAttribute('data-animal','tortuga');
+  vizcacha.setAttribute('data-animal','vizcacha');
+  
   document.body.insertBefore(hipopotamo, firstImage);
   document.body.insertBefore(tortuga, firstImage);
   document.body.insertBefore(vizcacha, firstImage);
   
-  hipopotamo.setAttribute('data-animal','hipopotamo');
-  tortuga.setAttribute('data-animal','tortuga');
-  vizcacha.setAttribute('data-animal','vizcacha');
+  
 
   hipopotamo.should.be.visible;
   tortuga.should.not.be.visible;
