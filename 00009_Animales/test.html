@@ -41,7 +41,7 @@ it("prueba 1", () => {
   _stubPromptResponse_(primerData);
   _resetDocument_();
   
-  imagenes[0].getAttribute('sarasa').should.eql('algo');
+  imagenes[0].getAttribute('sonIguales').should.eql(false);
 });
 
 it("prueba 2", () => {
