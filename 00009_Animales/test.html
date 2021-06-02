@@ -49,6 +49,19 @@ it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", ()
 
 it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
   _stubPromptResponse_('tortuga');
+  _resetDocument_();
+  let firstImage = document.querySelectorAll('img')[0];
+  hipopotamo = document.createElement('img');
+  tortuga = document.createElement('img');
+  vizcacha = document.createElement('img');
+  
+  document.body.insertBefore(hipopotamo, firstImage);
+  document.body.insertBefore(tortuga, firstImage);
+  document.body.insertBefore(vizcacha, firstImage);
+  
+  hipopotamo.setAttribute('data-animal','hipopotamo');
+  tortuga.setAttribute('data-animal','tortuga');
+  vizcacha.setAttribute('data-animal','vizcacha');
 
   hipopotamo.should.not.be.visible;
   tortuga.should.be.visible;
