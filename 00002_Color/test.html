@@ -1,13 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*/// Si ingresamos #FF6600 el color del body es FF6600 -- rgb(255,102,0);
-
-// Si ingresamos #FFFF00 el color del body es FFFF00 -- rgb(255,255,0);
-
-//Si ingresamos #002C58 el color del body es 002C58 -- rgb(0,44,88);
-
-// que esté centrado;
-
-beforeEach(() => {
+/*<tests#*/beforeEach(() => {
   _resetUserInteractions_();
 })
 
@@ -25,6 +17,14 @@ beforeEach(() => {
     _resetDocument_();
     
     document.querySelector('body').should.have.style('backgound-color', 'rgb(255, 255, 0)');
+  });
+  
+  it("Si ingresamos #002C58 el color del body es 002C58", function() {
+    _stubPromptResponse_('#FFFF00');
+
+    _resetDocument_();
+    
+    document.querySelector('body').should.have.style('backgound-color', 'rgb(0, 44, 88)');
   });
   
 
