@@ -22,7 +22,7 @@ beforeEach(() => {
     _stubPromptResponse_(-15);
     _resetDocument_();
     
-    document.querySelector('h1').should.have.style('color', 'rgb (0, 0, 255)');
+    document.querySelector('h1').should.have.style('color', 'rgb(0, 0, 255)');
     document.querySelector("h1").should.have.trimmed.text("Temperatura actual: -15°");
   });
   
@@ -30,7 +30,7 @@ beforeEach(() => {
     _stubPromptResponse_(0);
     _resetDocument_();
     
-    document.querySelector('h1').should.have.style('color', 'rgb (0, 170, 228)');
+    document.querySelector('h1').should.have.style('color', 'rgb(0, 170, 228)');
     document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 0°");
   });
   
@@ -38,7 +38,7 @@ beforeEach(() => {
     _stubPromptResponse_(24);
     _resetDocument_();
     
-    document.querySelector('h1').should.have.style('color', 'rgb (0, 255, 0)');
+    document.querySelector('h1').should.have.style('color', 'rgb(0, 255, 0)');
     document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 24°");
   });
   
@@ -46,7 +46,7 @@ beforeEach(() => {
     _stubPromptResponse_(29);
     _resetDocument_();
     
-    document.querySelector('h1').should.have.style('color', 'rgb (255, 255, 0)');
+    document.querySelector('h1').should.have.style('color', 'rgb(255, 255, 0)');
     document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 29°");
   });
   
@@ -54,7 +54,7 @@ beforeEach(() => {
     _stubPromptResponse_(30);
     _resetDocument_();
     
-    document.querySelector('h1').should.have.style('color', 'rgb (255, 128, 0)');
+    document.querySelector('h1').should.have.style('color', 'rgb(255, 128, 0)');
     document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 30°");
   });
   
@@ -62,7 +62,7 @@ beforeEach(() => {
     _stubPromptResponse_(35);
     _resetDocument_();
     
-    document.querySelector('h1').should.have.style('color', 'rgb (255, 0, 0)');
+    document.querySelector('h1').should.have.style('color', 'rgb(255, 0, 0)');
     document.querySelector("h1").should.have.trimmed.text("Temperatura actual: 35°");
   });
   
