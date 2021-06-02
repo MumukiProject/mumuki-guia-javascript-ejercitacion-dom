@@ -36,6 +36,23 @@ it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", ()
   imagenes[2].should.not.be.visible;
 });
 
+it("prueba 1", () => {
+  let primerData = imagenes[0].getAttribute('data-animal');
+  _stubPromptResponse_(primerData);
+  _resetDocument_();
+  
+  imagenes.sarasa.should.eql('algo');
+});
+
+it("prueba 2", () => {
+  let primerData = imagenes[0].getAttribute('data-animal');
+  _stubPromptResponse_(primerData);
+  _resetDocument_();
+  
+  imagenes.pedido.should.eql('algo');
+});
+
+
 /*it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
   let segundoData = imagenes[1].getAttribute('data-animal');
   _stubPromptResponse_(segundoData);
