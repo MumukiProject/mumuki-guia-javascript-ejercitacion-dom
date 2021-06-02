@@ -24,6 +24,8 @@ beforeEach(() => {
   
   it("Si ingresamos un título, el mismo se muestra en la card", () => {
     _stubPromptResponse_('Eterno resplandor de una mente sin recuerdos');
+    _stubPromptResponse_('');
+    _stubPromptResponse_('');
     document.querySelectorAll("h1")[0].should.have.trimmed.text("Eterno resplandor de una mente sin recuerdos");
   })
   
