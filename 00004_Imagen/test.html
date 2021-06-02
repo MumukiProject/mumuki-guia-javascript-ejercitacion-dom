@@ -14,7 +14,7 @@
   });
   
   it("Si ingresamos mediana la imagen se muestra con 500px", function() {
-    _stubPromptResponse_(500);
+    _stubPromptResponse_('mediana');
     _resetDocument_();
     
     document.querySelector('img').should.have.style('width', '500px');
