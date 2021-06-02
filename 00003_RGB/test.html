@@ -13,7 +13,7 @@
     document.querySelector('body').should.have.style('background-color', 'rgb(255, 0, 0)');
   });
   
-  it("si ingresamos 0, 200, 200 el body tiene color 0, 200, 200", function() {
+  it("Si ingresamos 0, 200, 200 el body tiene color 0, 200, 200", function() {
     _stubPromptResponse_(0);
     _stubPromptResponse_(200);
     _stubPromptResponse_(200);
@@ -23,7 +23,7 @@
     document.querySelector('body').should.have.style('background-color', 'rgb(0, 200, 200)');
   });
   
-  it("si ingresamos 120, 0, 255 el body tiene color 120, 0, 255.", function() {
+  it("Si ingresamos 120, 0, 255 el body tiene color 120, 0, 255.", function() {
     _stubPromptResponse_(120);
     _stubPromptResponse_(0);
     _stubPromptResponse_(255);
