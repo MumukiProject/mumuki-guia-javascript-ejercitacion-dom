@@ -27,13 +27,14 @@ it("La card tiene un título h1", () => {
 });
   
 it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
+  let primerData = imagenes[0].getAttribute('data-animal');
   _stubPromptResponse_('hipopotamo');
   _resetDocument_();
   
-  
-  hipopotamo.should.be.visible;
+  primerData.should.eql("perro");
+  /*hipopotamo.should.be.visible;
   tortuga.should.not.be.visible;
-  vizcacha.should.not.be.visible;
+  vizcacha.should.not.be.visible;*/
 });
 
 it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
