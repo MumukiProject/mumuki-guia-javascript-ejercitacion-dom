@@ -8,6 +8,7 @@
 let imagenes;
 
 beforeEach(() => {
+  _resetUserInteractions_();
   imagenes = document.querySelectorAll('img');
 });
 
@@ -27,7 +28,7 @@ it("La card tiene un título h1", () => {
   
 it("Si ingresamos el primer animal por el prompt solo se muestra ese animal", () => {
   let primerData = imagenes[0].getAttribute('data-animal');
-  _stubPromptResponse_(primerData);
+  _stubPromptResponse_("tigre");
   _resetDocument_();
   
   imagenes[0].should.be.visible;
