@@ -36,24 +36,24 @@ describe("", function() {
       });
       
       it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
-        let segundoData = imagenes[1].getAttribute('data-animal');
-        _stubPromptResponse_(segundoData);
+        let segundaData = imagenes[1].getAttribute('data-animal');
+        _stubPromptResponse_(segundaData);
         _resetDocument_();
         
-        imagenes[0].should.not.be.visible;
-        imagenes[1].should.be.visible;
-        imagenes[2].should.not.be.visible;
+        document.querySelectorAll('img')[0].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[1].should.have.style('visibility', 'visible');
+        document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');
       });
       
       it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
-        let tercerData = imagenes[2].getAttribute('data-animal');
-        _stubPromptResponse_(tercerData);
+        let terceraData = imagenes[2].getAttribute('data-animal');
+        _stubPromptResponse_(terceraData);
         _resetDocument_();
         
-        imagenes[0].should.not.be.visible;
-        imagenes[1].should.not.be.visible;
-        imagenes[2].should.be.visible;
-      })
+        document.querySelectorAll('img')[0].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[1].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[2].should.have.style('visibility', 'visible');
+      });
       
     });
   });  
