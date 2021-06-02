@@ -52,7 +52,7 @@ it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", (
   _stubPromptResponse_('tortuga');
   _resetDocument_();
     
-  hipopotamo.not.should.be.visible;
+  hipopotamo.should.not.be.visible;
   tortuga.should.be.visible;
   vizcacha.should.not.be.visible;
 });
