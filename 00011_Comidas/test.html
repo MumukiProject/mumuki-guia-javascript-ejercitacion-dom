@@ -1,6 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*///hay tres imágenes por categoría
-//las imágenes tienen 150px
+/*<tests#*///las imágenes tienen 150px
 //las imágenes tienen un margen de 20px
 //Si ingresamos comidas en el prompt se muestran solo las imagenes de comidas
 //Si ingresamos postres en el prompt se muestran solo las imagenes de postres
@@ -31,6 +30,18 @@ describe("", function() {
         comidas.length.should.eql(3);
         postres.length.should.eql(3);
         bebidas.length.should.eql(3);
+      });
+      
+      it("Las imágenes tienen 150px", () => {
+        comidas[0].should.have.style('width','150px');
+        comidas[1].should.have.style('width','150px');
+        comidas[2].should.have.style('width','150px');
+        postres[0].should.have.style('width','150px');
+        postres[1].should.have.style('width','150px');
+        postres[2].should.have.style('width','150px');
+        bebidas[0].should.have.style('width','150px');
+        bebidas[1].should.have.style('width','150px');
+        bebidas[2].should.have.style('width','150px');
       });
       
       /*it("Todos los li tienen un atributo data-continente", () => {
