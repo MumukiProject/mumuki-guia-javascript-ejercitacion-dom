@@ -47,7 +47,7 @@
         _stubPromptResponse_("América");
         _resetDocument_();
         
-        paisesAmerica[0].should.have.style('color', 'rgb(255, 0, 0)');
+        document.querySelectorAll("li[data-continente='América']")[0].should.have.style('color', 'rgb(255, 0, 0)');
       });
       /*
       it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
