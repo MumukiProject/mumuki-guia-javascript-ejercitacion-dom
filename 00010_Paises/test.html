@@ -68,6 +68,11 @@ describe("", function() {
         paisesAmerica[1].should.have.style("color", "rgb(255, 0, 0)");
       });
       
+      it("Prueba", () => {
+        _resetUserInteractions_();
+        _stubPromptResponse_("América");
+        _promptMessagesCount_().should.eql(1);
+      });
     });
   });  
 });/*#tests>*/
