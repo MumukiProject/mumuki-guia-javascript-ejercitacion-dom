@@ -9,10 +9,18 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
-      let imagenes;
+      let paisesAmerica;
+      let paisesOceania;
+      let paisesAfrica;
+      let paisesAsia;
+      let paisesEuropa;
       beforeEach(() => {
         _resetUserInteractions_();
-         imagenes = document.querySelectorAll('img');
+         paisesAmerica = document.querySelectorAll("li [data-continente = 'América']");
+         paisesOceania = document.querySelectorAll("li [data-continente = 'Oceanía']");
+         paisesAfrica = document.querySelectorAll("li [data-continente = 'África']");
+         paisesAsia = document.querySelectorAll("li [data-continente = 'Asia']");
+         paisesEuropa = document.querySelectorAll("li [data-continente = 'Europa']");
       });
       
       it("Hay diez li", () => {
@@ -20,12 +28,11 @@ describe("", function() {
       });
       
       it("Hay dos países con data-continente = 'África'", () => {
-        document.querySelectorAll("li [data-continente = 'África']")[0].should.exist;
-        document.querySelectorAll("li [data-continente = 'África']")[1].should.exist;
+        paisesAfrica.length.should.eql(2);
       });
       
       it("Hay dos países con data-continente = 'América'", () => {
-        document.querySelectorAll("li [data-continente='América']").should.exist;
+        paisesAmerica.should.exist;
       });
       
       it("Hay dos países con data-continente = 'Asia'", () => {
