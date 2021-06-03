@@ -64,7 +64,7 @@ describe("", function() {
         _stubPromptResponse_("América");
         _resetDocument_();
         
-        paisesAmerica[0].sarasa.should.eql("blabla");
+        paisesAmerica[0].getAttribute("sarasa").should.eql("blabla");
       });
       
     });
