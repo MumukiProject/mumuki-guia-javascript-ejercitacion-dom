@@ -43,16 +43,6 @@ describe("", function() {
         document.querySelectorAll('img')[0].should.have.style('visibility', 'visible');
         document.querySelectorAll('img')[1].should.have.style('visibility', 'hidden');
         document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');
-      });
-      
-      it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
-        let segundaData = imagenes[1].getAttribute('data-animal');
-        _stubPromptResponse_(segundaData);
-        _resetDocument_();
-        
-        document.querySelectorAll('img')[0].should.have.style('visibility', 'hidden');
-        document.querySelectorAll('img')[1].should.have.style('visibility', 'visible');
-        document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');
       });*/
     });
   });  
