@@ -90,13 +90,14 @@ describe("", function() {
         //li10.should.have.style('font-weight','normal');
         });
       it("Prueba", () => {
-        let primerLi = document.querySelectorAll("li")[0];
-        let palabras = primerLi.textContent.split(' ');
+        let lis = document.querySelectorAll("li");
+        let palabras = lis[0].textContent.split(' ');
         _stubPromptResponse_(palabras[0]);
         _resetDocument_();
         
-        evaluarEstilos(document.querySelectorAll("li")[0], palabras, palabras[0]);
-        evaluarEstilos(document.querySelectorAll("li")[4], palabras, palabras[0]);
+        for (i = 0; i < lis.length; i++) {
+          evaluarEstilos(lis[i], palabras, palabras[0]);
+        }
       });
       
     });
