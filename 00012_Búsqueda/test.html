@@ -18,7 +18,11 @@ describe("", function() {
       
       function evaluarEstilos(li, palabras, palabra) {
         if(palabras.includes(palabra)) {
-          li.should.not.have.style('font-weight','bold');
+          li.should.have.style('font-weight','bold');
+          li.should.have.style('color','rgb(255, 0, 0)');
+        } else {
+          li.should.have.style('font-weight','normal');
+          li.should.have.style('color','rgb(0, 0, 0)');
         }
       }
       
