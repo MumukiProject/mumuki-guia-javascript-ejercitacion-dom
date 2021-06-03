@@ -14,7 +14,6 @@ describe("", function() {
       let paisesAfrica;
       let paisesAsia;
       let paisesEuropa;
-      let paises
       beforeEach(() => {
         _resetUserInteractions_();
          paisesAmerica = document.querySelectorAll("li [data-continente = 'América']");
@@ -22,7 +21,6 @@ describe("", function() {
          paisesAfrica = document.querySelectorAll("li [data-continente = 'África']");
          paisesAsia = document.querySelectorAll("li [data-continente = 'Asia']");
          paisesEuropa = document.querySelectorAll("li [data-continente = 'Europa']");
-         paises = document.querySelectorAll('li');
       });
       
       it("Hay diez li", () => {
@@ -57,7 +55,7 @@ describe("", function() {
         _stubPromptResponse_('América');
         _resetDocument_();
         
-        primerPaisAmerica.should.have.trimmed.text('zaraza');
+        primerPaisAmerica.should.eql(paisesAmerica);
       });
       
     });
