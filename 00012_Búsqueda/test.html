@@ -97,9 +97,9 @@ describe("", function() {
         _resetDocument_();
         lis = document.querySelectorAll("li");
         
-        evaluarEstilos(lis[0], palabras[0]);
-        evaluarEstilos(lis[1], palabras[0]);
-        
+        for (i = 0; i < lis.length; i++) {
+          evaluarEstilos(lis[0], palabras[0]);
+        }
       });
       
     });
