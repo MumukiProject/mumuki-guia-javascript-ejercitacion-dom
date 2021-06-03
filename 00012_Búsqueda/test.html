@@ -16,7 +16,8 @@ describe("", function() {
       let li9;
       let li10;
       
-      function evaluarEstilos(li, palabras, palabra) {
+      function evaluarEstilos(li, palabra) {
+        let palabras = li.textContent.split(' ');
         if(palabras.includes(palabra)) {
           li.should.have.style('font-weight','bold');
           li.should.have.style('color','rgb(255, 0, 0)');
@@ -96,8 +97,8 @@ describe("", function() {
         _resetDocument_();
         lis = document.querySelectorAll("li");
         
-        evaluarEstilos(lis[0], palabras, palabras[0]);
-        evaluarEstilos(lis[1], palabras, palabras[0]);
+        evaluarEstilos(lis[0], palabras[0]);
+        evaluarEstilos(lis[1], palabras[0]);
         
       });
       
