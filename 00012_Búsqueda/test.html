@@ -16,6 +16,12 @@ describe("", function() {
       let li9;
       let li10;
       
+      function evaluarEstilos(li, palabras, palabra) {
+        if(palabras.includes(palabra)) {
+          li.should.have.style('font-weight','bold');
+        }
+      }
+      
       function cargarLis(){
        li1 = document.createElement('li');
        li2 = document.createElement('li');
@@ -85,7 +91,7 @@ describe("", function() {
         _stubPromptResponse_(palabras[0]);
         _resetDocument_();
         
-        document.querySelectorAll("li")[0].should.have.style('font-weight','bold');
+        evaluarEstilos(document.querySelectorAll("li")[0], palabras, palabras[0]);
       });
       
     });
