@@ -1,6 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*///hay diez li
-//si ingresamos una palabra se destacan las palabras que corresponden al texto ingresado.
+/*<tests#*///si ingresamos una palabra se destacan las palabras que corresponden al texto ingresado.
 
 describe("", function() {
   context("", () => {
@@ -63,7 +62,8 @@ describe("", function() {
         _stubPromptResponse_("ser");
         _resetDocument_();
         cargarLis();
-        li1.should.have.trimmed.text('zaraza');
+        //li1.should.have.trimmed.text('zaraza');
+        document.querySelectorAll('li')[13].style('color','rgb(255, 0, 0)');
         //li1.should.have.style('font-weight','normal');
         //li2.should.have.style('color','rgb(0, 0, 0)');
         //li3.should.have.style('color','rgb(255, 0, 0)');
