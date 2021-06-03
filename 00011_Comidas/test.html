@@ -9,8 +9,14 @@
 describe("", function() {
   context("", () => {
     describe("", () => {
+      let comidas;
+      let postres;
+      let bebidas;
       beforeEach(() => {
         _resetUserInteractions_();
+         comidas = document.querySelectorAll("img[data-categoria='comidas'");
+         postres = document.querySelectorAll("img[data-categoria='postres'");
+         bebidas = document.querySelectorAll("img[data-categoria='bebidas'");
       });
       
       it("Hay nueve imágenes", () => {
@@ -19,9 +25,9 @@ describe("", function() {
       
       it("Hay tres imágenes por categoría", () => {
         it("Hay dos países por cada continente", () => {
-        document.querySelectorAll("img[data-categoria='comidas'").length.should.eql(3);
-        document.querySelectorAll("img[data-categoria='postres'").length.should.eql(3);
-        document.querySelectorAll("img[data-categoria='bebidas'").length.should.eql(3);
+        comidas.length.should.eql(3);
+        postres.length.should.eql(3);
+        bebidas.length.should.eql(3);
       });
   
       /*it("Si ingresamos comidas por el prompt solo se muestran esas imágenes", () => {
@@ -46,8 +52,8 @@ describe("", function() {
         
         document.querySelectorAll('img')[0].should.have.style('visibility', 'hidden');
         document.querySelectorAll('img')[1].should.have.style('visibility', 'visible');
-        document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');*/
-      });
+        document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');
+      });*/
     });
   });  
 });/*#tests>*/
