@@ -92,8 +92,8 @@ describe("", function() {
         });
       it("Prueba", () => {
         let lis = document.querySelectorAll("li");
-        let palabras = lis[6].textContent.split(' ');
-        _stubPromptResponse_(palabras[1]);
+        let palabras = lis[0].textContent.split(' ');
+        _stubPromptResponse_(palabras[0]);
         _resetDocument_();
         lis = document.querySelectorAll("li");
         
