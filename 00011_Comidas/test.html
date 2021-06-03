@@ -1,10 +1,61 @@
 /*<output#*//*#output>*/
-/*<tests#*///hay nueve imágenes
-//hay tres imágenes por categoría
+/*<tests#*///hay tres imágenes por categoría
 //las imágenes tienen 150px
 //las imágenes tienen un margen de 20px
 //Si ingresamos comidas en el prompt se muestran solo las imagenes de comidas
 //Si ingresamos postres en el prompt se muestran solo las imagenes de postres
-//Si ingresamos bebidas en el prompt se muestran solo las imagenes de bebidas/*#tests>*/
+//Si ingresamos bebidas en el prompt se muestran solo las imagenes de bebidas
+
+describe("", function() {
+  context("", () => {
+    describe("", () => {
+      let comidas;
+      let postres;
+      let bebidas;
+      beforeEach(() => {
+        _resetUserInteractions_();
+         comidas = document.querySelectorAll("img[data-categoria='comidas'");
+         postres = document.querySelectorAll("img[data-categoria='postres'");
+         bebidas = document.querySelectorAll("img[data-categoria='bebidas'");
+      });
+      
+      it("Hay nueve imágenes", () => {
+        document.querySelectorAll("img").length.should.eql(9);
+      });
+      
+      it("Hay tres imágenes por categoría", () => {
+        it("Hay dos países por cada continente", () => {
+        comidas.length.should.eql(3);
+        postres.length.should.eql(3);
+        bebidas.length.should.eql(3);
+      });
+  
+      /*it("Si ingresamos comidas por el prompt solo se muestran esas imágenes", () => {
+        _stubPromptResponse_('comidas');
+        _resetDocument_();
+        
+        document.querySelectorAll('img')[0].should.have.style('visibility', 'visible');
+        document.querySelectorAll('img')[1].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[0].should.have.style('visibility', 'visible');
+        document.querySelectorAll('img')[1].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[0].should.have.style('visibility', 'visible');
+        document.querySelectorAll('img')[1].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');
+      });
+      
+      it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
+        let segundaData = imagenes[1].getAttribute('data-animal');
+        _stubPromptResponse_(segundaData);
+        _resetDocument_();
+        
+        document.querySelectorAll('img')[0].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[1].should.have.style('visibility', 'visible');
+        document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');*/
+      });
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
