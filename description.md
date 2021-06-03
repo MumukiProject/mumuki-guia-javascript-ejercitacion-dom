@@ -1,1 +1,1 @@
-Ejercitación DOM
+Otra forma de interactuar con el _Document Object Model_ es utilizar `prompt`s. Aprendamos más sobre estos cuadros de dialogo y como utilizar esa información para hacer dinámicas nuestras páginas. :nerd:
