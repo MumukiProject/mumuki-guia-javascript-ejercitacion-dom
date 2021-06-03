@@ -81,11 +81,11 @@ describe("", function() {
         });
       it("Prueba", () => {
         let primerLi = document.querySelectorAll("li")[0];
-        
-        _stubPromptResponse_("felicidad");
+        let palabras = primerLi.textContent.split(' ');
+        _stubPromptResponse_(palabras[0]);
         _resetDocument_();
         
-        primerLi.should.have.style('font-weight','bold');
+        document.querySelectorAll("li")[0].should.have.style('font-weight','bold');
       });
       
     });
