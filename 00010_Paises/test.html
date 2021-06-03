@@ -51,11 +51,7 @@ describe("", function() {
       
       
       it("Si ingresamos América se destacan los países que corresponden a América", () => {
-        let primerPaisAmerica = paises[0].getAttribute("data-continente = 'América'");
-        _stubPromptResponse_('América');
-        _resetDocument_();
-        
-        primerPaisAmerica.should.eql(paisesAmerica);
+  
       });
       
     });
