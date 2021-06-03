@@ -93,7 +93,7 @@ describe("", function() {
       it("Prueba", () => {
         let lis = document.querySelectorAll("li");
         let palabras = lis[0].textContent.split(' ');
-        _stubPromptResponse_(palabras[0]);
+        _stubPromptResponse_(palabras[2]);
         _resetDocument_();
         lis = document.querySelectorAll("li");
         
