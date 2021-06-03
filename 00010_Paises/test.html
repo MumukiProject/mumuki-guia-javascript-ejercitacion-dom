@@ -28,7 +28,8 @@ describe("", function() {
       });
       
       it("Hay dos países con data-continente = 'África'", () => {
-        paisesAfrica.length.should.eql(2);
+        paisesAfrica[0].should.exist;
+        paisesAfrica[1].should.exist;
       });
       
       it("Hay dos países con data-continente = 'América'", () => {
