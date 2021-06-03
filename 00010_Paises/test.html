@@ -17,22 +17,22 @@ describe("", function() {
       beforeEach(() => {
         _resetUserInteractions_();
          paisesAmerica = document.querySelectorAll("li[data-continente='América']");
-         paisesOceania = document.querySelectorAll("li [data-continente = 'Oceanía']");
-         paisesAfrica = document.querySelectorAll("li [data-continente = 'África']");
-         paisesAsia = document.querySelectorAll("li [data-continente = 'Asia']");
-         paisesEuropa = document.querySelectorAll("li [data-continente = 'Europa']");
+         paisesOceania = document.querySelectorAll("li[data-continente='Oceanía']");
+         paisesAfrica = document.querySelectorAll("li[data-continente='África']");
+         paisesAsia = document.querySelectorAll("li[data-continente='Asia']");
+         paisesEuropa = document.querySelectorAll("li[data-continente='Europa']");
       });
       
       it("Hay diez li", () => {
         document.querySelectorAll("li").length.should.eql(10);
       });
       
-      it("Están todos los continentes", () => {
-        paisesAfrica.should.exist;
-        paisesAmerica.should.exist;
-        paisesOceania.should.exist;
-        paisesAsia.should.exist;
-        paisesEuropa.should.exist;
+      it("Hay dos países por cada continente", () => {
+        paisesOceania.length.should.eql(2);
+        paisesAfrica.length.should.eql(2);
+        paisesAmerica.length.should.eql(2);
+        paisesAsia.length.should.eql(2);
+        paisesEuropa.length.should.eql(2);
       });
       
       it("Todos los li tienen un atributo data-continente", () => {
@@ -51,7 +51,7 @@ describe("", function() {
       
       
       it("Si ingresamos América se destacan los países que corresponden a América", () => {
-        paisesOceania.length.should.eql(2);
+        
       });
       
     });
