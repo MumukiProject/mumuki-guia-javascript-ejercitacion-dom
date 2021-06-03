@@ -1,10 +1,40 @@
 /*<output#*//*#output>*/
-/*<tests#*///hay diez li
-// hay dos li por cada continente.
+/*<tests#*/// hay dos li por cada continente.
 // si ingresamos América se destacan los países que corresponden a América.
 // si ingresamos Asia se destacan los países que corresponden a Asia
 //si ingresamos África se destacan los países que corresponden a África
 //si ingresamos Europa se destacan los países que corresponden a Europa
-//si ingresamos Oceanía se destacan los países que corresponden a Oceanía/*#tests>*/
+//si ingresamos Oceanía se destacan los países que corresponden a Oceanía
+
+describe("", function() {
+  context("", () => {
+    describe("", () => {
+      let imagenes;
+      beforeEach(() => {
+        _resetUserInteractions_();
+         imagenes = document.querySelectorAll('img');
+      });
+      
+      it("Hay diez li", () => {
+        document.querySelectorAll("li").length.should.eql(10);
+      });
+      
+      it("Hay diez li", () => {
+        document.querySelectorAll("li [data-continente = 'África']").length.should.eql(2);
+      });
+      
+      /*it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
+        let terceraData = imagenes[2].getAttribute('data-animal');
+        _stubPromptResponse_(terceraData);
+        _resetDocument_();
+        
+        document.querySelectorAll('img')[0].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[1].should.have.style('visibility', 'hidden');
+        document.querySelectorAll('img')[2].should.have.style('visibility', 'visible');
+      });*/
+      
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
