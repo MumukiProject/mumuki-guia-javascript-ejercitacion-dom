@@ -20,7 +20,8 @@ describe("", function() {
       });
       
       it("Hay dos países con data-continente = 'África'", () => {
-        document.querySelectorAll("li [data-continente = 'África']").length.should.eql(2);
+        document.querySelectorAll("li [data-continente = 'África']")[0].should.exist;
+        document.querySelectorAll("li [data-continente = 'África']")[1].should.exist;
       });
       
       it("Hay dos países con data-continente = 'América'", () => {
@@ -28,15 +29,15 @@ describe("", function() {
       });
       
       it("Hay dos países con data-continente = 'Asia'", () => {
-        document.querySelectorAll("li [data-continente = 'Asia']").length.should.eql(2);
+        document.querySelectorAll("li [data-continente = 'Asia']").should.exist;
       });
       
       it("Hay dos países con data-continente = 'Europa'", () => {
-        document.querySelectorAll("li [data-continente = 'Europa']").length.should.eql(2);
+        document.querySelectorAll("li [data-continente = 'Europa']").should.exist;
       });
       
       it("Hay dos países con data-continente = 'Oceanía'", () => {
-        document.querySelectorAll("li [data-continente = 'Oceanía']").length.should.eql(2);
+        document.querySelectorAll("li [data-continente = 'Oceanía']").should.exist;
       });
       
       /*it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
