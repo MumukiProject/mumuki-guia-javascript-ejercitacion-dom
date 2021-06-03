@@ -1,5 +1,41 @@
 /*<output#*//*#output>*/
 /*<tests#*///hay diez li
-//si ingresamos una palabra se destacan las palabras que corresponden al texto ingresado./*#tests>*/
+//si ingresamos una palabra se destacan las palabras que corresponden al texto ingresado.
+
+describe("", function() {
+  context("", () => {
+    describe("", () => {
+      let li1;
+      let li2;
+      let li3;
+      let li4;
+      let li5;
+      let li6;
+      let li7;
+      let li8;
+      let li9;
+      let li10;
+      beforeEach(() => {
+       li1 = document.createElement(li);
+       
+       document.appendChild(li1);
+       _resetUserInteractions_();
+      });
+      
+      it("Hay diez li", () => {
+        document.querySelectorAll("li").length.should.eql(10);
+      });
+
+      /*it("", () => {
+        _stubPromptResponse_("comidas");
+        _resetDocument_();
+        cargarImagenes();
+
+      });*/
+      
+      
+    });
+  });  
+});/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
