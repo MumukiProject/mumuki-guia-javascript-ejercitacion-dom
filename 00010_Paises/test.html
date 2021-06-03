@@ -19,8 +19,24 @@ describe("", function() {
         document.querySelectorAll("li").length.should.eql(10);
       });
       
-      it("Hay diez li", () => {
+      it("Hay dos países con data-continente = 'África'", () => {
         document.querySelectorAll("li [data-continente = 'África']").length.should.eql(2);
+      });
+      
+      it("Hay dos países con data-continente = 'América'", () => {
+        document.querySelectorAll("li [data-continente = 'América']").length.should.eql(2);
+      });
+      
+      it("Hay dos países con data-continente = 'Asia'", () => {
+        document.querySelectorAll("li [data-continente = 'Asia']").length.should.eql(2);
+      });
+      
+      it("Hay dos países con data-continente = 'Europa'", () => {
+        document.querySelectorAll("li [data-continente = 'Europa']").length.should.eql(2);
+      });
+      
+      it("Hay dos países con data-continente = 'Oceanía'", () => {
+        document.querySelectorAll("li [data-continente = 'Oceanía']").length.should.eql(2);
       });
       
       /*it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
