@@ -60,6 +60,13 @@ describe("", function() {
         paisesAmerica[1].should.have.style("color", "rgb(255, 0, 0)");
       });
       
+      it("Si ingresamos América se destacan los países que corresponden a América", () => {
+        _stubPromptResponse_("América");
+        _resetDocument_();
+        
+        paisesAmerica[0].sarasa.should.eql("blabla");
+      });
+      
     });
   });  
 });/*#tests>*/
