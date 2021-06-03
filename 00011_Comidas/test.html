@@ -70,7 +70,7 @@ describe("", function() {
       });
       
       it("Si ingresamos postres en el prompt se muestran solo las imagenes de postres", () => {
-        _stubPromptResponse_("comidas");
+        _stubPromptResponse_("postres");
         _resetDocument_();
         cargarImagenes();
         comidas[0].should.have.style("visibility", "hidden");
@@ -85,7 +85,7 @@ describe("", function() {
       });
       
       it("Si ingresamos bebidas en el prompt se muestran solo las imagenes de bebidas", () => {
-        _stubPromptResponse_("comidas");
+        _stubPromptResponse_("bebidas");
         _resetDocument_();
         cargarImagenes();
         comidas[0].should.have.style("visibility", "hidden");
