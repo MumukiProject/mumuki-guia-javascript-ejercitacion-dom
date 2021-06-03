@@ -1,8 +1,5 @@
 /*<output#*//*#output>*/
-/*<tests#*///LA ALTERNATIVA QUE SE ME OCURRE ES:
-//* darles una lista ordenada con 10 frases celebres de mujeres de ciencia y tec y que ellas hagan solo la lógica.
-
-describe("", function() {
+/*<tests#*/describe("", function() {
   context("", () => {
     describe("", () => {
       let li1;
@@ -16,7 +13,7 @@ describe("", function() {
       let li9;
       let li10;
       
-      function evaluarEstilos(li, palabra) {
+      /*function evaluarEstilos(li, palabra) {
         let palabras = li.textContent.split(' ');
         if(palabras.includes(palabra)) {
           li.should.have.style('font-weight','bold');
@@ -25,7 +22,7 @@ describe("", function() {
           li.should.have.style('font-weight','normal');
           li.should.have.style('color','rgb(0, 0, 0)');
         }
-      }
+      }*/
       
       function cargarLis(){
        li1 = document.createElement('li');
@@ -74,23 +71,20 @@ describe("", function() {
         _stubPromptResponse_("ser");
         _resetDocument_();
         cargarLis();
-        li1.should.have.trimmed.text('zaraza');
-        //document.querySelectorAll('li')[13].should.have.style('color','rgb(255, 0, 0)');
-        document.querySelectorAll('li')[13].should.have.trimmed.text('zaraza');
-        //li1.should.have.style('font-weight','normal');
-        //li2.should.have.style('color','rgb(0, 0, 0)');
-        //li3.should.have.style('color','rgb(255, 0, 0)');
-        //li3.should.have.style('font-weight','bold');
-        //li4.should.have.style('color','rgb(255, 0, 0)');
-        //li4.should.have.style('font-weight','bold');
-        //li5.should.have.style('color','rgb(0, 0, 0)');
-        //li6.should.have.style('color','rgb(0, 0, 0)');
-        //li7.should.have.style('font-weight','normal');
-        //li8.should.have.style('color','rgb(0, 0, 0)');
-        //li9.should.have.style('font-weight','normal');
-        //li10.should.have.style('font-weight','normal');
+          li1.should.have.style('font-weight','normal');
+          li2.should.have.style('color','rgb(0, 0, 0)');
+          li3.should.have.style('color','rgb(255, 0, 0)');
+          li3.should.have.style('font-weight','bold');
+          li4.should.have.style('color','rgb(255, 0, 0)');
+          li4.should.have.style('font-weight','bold');
+          li5.should.have.style('color','rgb(0, 0, 0)');
+          li6.should.have.style('color','rgb(0, 0, 0)');
+          li7.should.have.style('font-weight','normal');
+          li8.should.have.style('color','rgb(0, 0, 0)');
+          li9.should.have.style('font-weight','normal');
+          li10.should.have.style('font-weight','normal');
         });
-      it("Prueba", () => {
+      /*it("Prueba", () => {
         let lis = document.querySelectorAll("li");
         let palabras = lis[0].textContent.split(' ');
         _stubPromptResponse_(palabras[0]);
@@ -100,7 +94,7 @@ describe("", function() {
         for (i = 0; i < lis.length; i++) {
           evaluarEstilos(lis[i], palabras[0]);
         }
-      });
+      });*/
       
     });
   });  
