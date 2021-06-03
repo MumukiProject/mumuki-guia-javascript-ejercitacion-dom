@@ -51,7 +51,11 @@ describe("", function() {
       
       
       it("Si ingresamos América se destacan los países que corresponden a América", () => {
+        _stubPromptResponse_("América");
+        _resetDocument_();
         
+        paisesAmerica[0].should.have.style("font-weight", "bold");
+        paisesAmerica[1].should.have.style("color", "rgb(255,0,0)");
       });
       
     });
