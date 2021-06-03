@@ -20,7 +20,6 @@ describe("", function() {
        paisesAfrica = document.querySelectorAll("li[data-continente='África']");
        paisesAsia = document.querySelectorAll("li[data-continente='Asia']");
        paisesEuropa = document.querySelectorAll("li[data-continente='Europa']");
-       _resetUserInteractions_();
       });
       
       it("Hay diez li", () => {
@@ -56,6 +55,7 @@ describe("", function() {
         paisesAmerica[0].should.have.style("color", "rgb(255, 0, 0)");
         paisesAmerica[1].should.have.style("font-weight", "bold");
         paisesAmerica[1].should.have.style("color", "rgb(255, 0, 0)");
+        _resetUserInteractions_();
       });
       
       it("Si ingresamos América se destacan los países que corresponden a América 2", () => {
@@ -65,11 +65,13 @@ describe("", function() {
         paisesAmerica[0].should.have.style("color", "rgb(255, 0, 0)");
         paisesAmerica[1].should.have.style("font-weight", "bold");
         paisesAmerica[1].should.have.style("color", "rgb(255, 0, 0)");
+        _resetUserInteractions_();
       });
       
       it("Prueba", () => {
         _stubPromptResponse_("América");
         _promptMessagesCount_().should.eql(1);
+        _resetUserInteractions_();
       });
     });
   });  
