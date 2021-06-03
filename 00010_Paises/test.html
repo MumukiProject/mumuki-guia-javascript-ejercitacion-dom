@@ -1,5 +1,12 @@
 /*<output#*//*#output>*/
-/*<tests#*/describe("", function() {
+/*<tests#*/
+// Si ingresamos América se destacan los países que corresponden a América.
+// Si ingresamos Asia se destacan los países que corresponden a Asia
+//Si ingresamos África se destacan los países que corresponden a África
+//Si ingresamos Europa se destacan los países que corresponden a Europa
+//Si ingresamos Oceanía se destacan los países que corresponden a Oceanía
+
+describe("", function() {
   context("", () => {
     describe("", () => {
       let paisesAmerica;
@@ -7,15 +14,19 @@
       let paisesAfrica;
       let paisesAsia;
       let paisesEuropa;
-      beforeEach(() => {
-        _resetUserInteractions_();
-         paisesAmerica = document.querySelectorAll("li[data-continente='América']");
-         paisesOceania = document.querySelectorAll("li[data-continente='Oceanía']");
-         paisesAfrica = document.querySelectorAll("li[data-continente='África']");
-         paisesAsia = document.querySelectorAll("li[data-continente='Asia']");
-         paisesEuropa = document.querySelectorAll("li[data-continente='Europa']");
-      });
 
+      function cargarPaises() {
+        paisesAmerica = document.querySelectorAll("li[data-continente='América']");
+        paisesOceania = document.querySelectorAll("li[data-continente='Oceanía']");
+        paisesAfrica = document.querySelectorAll("li[data-continente='África']");
+        paisesAsia = document.querySelectorAll("li[data-continente='Asia']");
+        paisesEuropa = document.querySelectorAll("li[data-continente='Europa']");
+      }
+      beforeEach(() => {
+       cargarPaises()
+       _resetUserInteractions_();
+      });
+      
       it("Hay diez li", () => {
         document.querySelectorAll("li").length.should.eql(10);
       });
@@ -41,35 +52,45 @@
         document.querySelectorAll('li')[9].should.have.attr('data-continente');
       });
       
-      
-  
       it("Si ingresamos América se destacan los países que corresponden a América", () => {
         _stubPromptResponse_("América");
         _resetDocument_();
-        
-        document.querySelectorAll("li[data-continente='América']")[0].should.have.style('color', 'rgb(255, 0, 0)');
-      });
-      /*
-      it("Si ingresamos el segundo animal por el prompt solo se muestra ese animal", () => {
-        let segundaData = imagenes[1].getAttribute('data-animal');
-        _stubPromptResponse_(segundaData);
-        _resetDocument_();
-        
-        document.querySelectorAll('img')[0].should.have.style('visibility', 'hidden');
-        document.querySelectorAll('img')[1].should.have.style('visibility', 'visible');
-        document.querySelectorAll('img')[2].should.have.style('visibility', 'hidden');
+        cargarPaises()
+        paisesAmerica[0].should.have.style("font-weight", "bold");
+        paisesAmerica[0].should.have.style("color", "rgb(255, 0, 0)");
+        paisesAmerica[1].should.have.style("font-weight", "bold");
+        paisesAmerica[1].should.have.style("color", "rgb(255, 0, 0)");
       });
       
-      it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
-        let terceraData = imagenes[2].getAttribute('data-animal');
-        _stubPromptResponse_(terceraData);
+      it("Si ingresamos América se destacan los países que corresponden a América 2", () => {
+        _stubPromptResponse_("América");
         _resetDocument_();
-        
-        document.querySelectorAll('img')[0].should.have.style('visibility', 'hidden');
-        document.querySelectorAll('img')[1].should.have.style('visibility', 'hidden');
-        document.querySelectorAll('img')[2].should.have.style('visibility', 'visible');
-      })*/
+        cargarPaises()
+        paisesAmerica[0].should.have.style("font-weight", "bold");
+        paisesAmerica[0].should.have.style("color", "rgb(255, 0, 0)");
+        paisesAmerica[1].should.have.style("font-weight", "bold");
+        paisesAmerica[1].should.have.style("color", "rgb(255, 0, 0)");
+      });
       
+      it("Si ingresamos Europa se destacan los países que corresponden a Europa", () => {
+        _stubPromptResponse_("Europa");
+        _resetDocument_();
+        cargarPaises()
+        paisesEuropa[0].should.have.style("font-weight", "bold");
+        paisesEuropa[0].should.have.style("color", "rgb(255, 0, 0)");
+        paisesEuropa[1].should.have.style("font-weight", "bold");
+        paisesEuropa[1].should.have.style("color", "rgb(255, 0, 0)");
+      });
+      
+      it("Si ingresamos Europa se destacan los países que corresponden a Europa 2", () => {
+        _stubPromptResponse_("Europa");
+        _resetDocument_();
+        cargarPaises()
+        paisesEuropa[0].should.have.style("font-weight", "bold");
+        paisesEuropa[0].should.have.style("color", "rgb(255, 0, 0)");
+        paisesEuropa[1].should.have.style("font-weight", "bold");
+        paisesEuropa[1].should.have.style("color", "rgb(255, 0, 0)");
+      });
     });
   });  
 });/*#tests>*/
