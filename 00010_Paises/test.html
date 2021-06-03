@@ -27,26 +27,28 @@ describe("", function() {
         document.querySelectorAll("li").length.should.eql(10);
       });
       
-      it("Hay dos países con data-continente = 'África'", () => {
-        paisesAfrica[0].should.exist;
-        paisesAfrica[1].should.exist;
-      });
-      
-      it("Hay dos países con data-continente = 'América'", () => {
+      it("Están todos los continentes", () => {
+        paisesAfrica.should.exist;
         paisesAmerica.should.exist;
+        paisesOceania.should.exist;
+        paisesAsia.should.exist;
+        paisesEuropa.should.exist;
       });
       
-      it("Hay dos países con data-continente = 'Asia'", () => {
-        document.querySelectorAll("li [data-continente = 'Asia']").should.exist;
+      it("Todos los li tienen un atributo data-continente", () => {
+        document.querySelectorAll('li')[0].should.have.attr('data-continente');
+        document.querySelectorAll('li')[1].should.have.attr('data-continente');
+        document.querySelectorAll('li')[2].should.have.attr('data-continente');
+        document.querySelectorAll('li')[3].should.have.attr('data-continente');
+        document.querySelectorAll('li')[4].should.have.attr('data-continente');
+        document.querySelectorAll('li')[5].should.have.attr('data-continente');
+        document.querySelectorAll('li')[6].should.have.attr('data-continente');
+        document.querySelectorAll('li')[7].should.have.attr('data-continente');
+        document.querySelectorAll('li')[8].should.have.attr('data-continente');
+        document.querySelectorAll('li')[9].should.have.attr('data-continente');
+
       });
       
-      it("Hay dos países con data-continente = 'Europa'", () => {
-        document.querySelectorAll("li [data-continente = 'Europa']").should.exist;
-      });
-      
-      it("Hay dos países con data-continente = 'Oceanía'", () => {
-        document.querySelectorAll("li [data-continente = 'Oceanía']").should.exist;
-      });
       
       /*it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
         let terceraData = imagenes[2].getAttribute('data-animal');
