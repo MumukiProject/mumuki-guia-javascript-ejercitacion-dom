@@ -80,10 +80,12 @@ describe("", function() {
         //li10.should.have.style('font-weight','normal');
         });
       it("Prueba", () => {
+        let primerLi = document.querySelectorAll("li")[0];
+        
         _stubPromptResponse_("felicidad");
         _resetDocument_();
         
-        document.querySelectorAll("li")[0].should.have.style('font-weight','bold');
+        primerLi.should.have.style('font-weight','bold');
       });
       
     });
