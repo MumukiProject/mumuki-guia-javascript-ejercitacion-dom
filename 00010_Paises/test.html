@@ -1,10 +1,10 @@
 /*<output#*//*#output>*/
-/*<tests#*/// hay dos li por cada continente.
-// si ingresamos América se destacan los países que corresponden a América.
-// si ingresamos Asia se destacan los países que corresponden a Asia
-//si ingresamos África se destacan los países que corresponden a África
-//si ingresamos Europa se destacan los países que corresponden a Europa
-//si ingresamos Oceanía se destacan los países que corresponden a Oceanía
+/*<tests#*/
+// Si ingresamos América se destacan los países que corresponden a América.
+// Si ingresamos Asia se destacan los países que corresponden a Asia
+//Si ingresamos África se destacan los países que corresponden a África
+//Si ingresamos Europa se destacan los países que corresponden a Europa
+//Si ingresamos Oceanía se destacan los países que corresponden a Oceanía
 
 describe("", function() {
   context("", () => {
@@ -14,6 +14,7 @@ describe("", function() {
       let paisesAfrica;
       let paisesAsia;
       let paisesEuropa;
+      let paises
       beforeEach(() => {
         _resetUserInteractions_();
          paisesAmerica = document.querySelectorAll("li [data-continente = 'América']");
@@ -21,6 +22,7 @@ describe("", function() {
          paisesAfrica = document.querySelectorAll("li [data-continente = 'África']");
          paisesAsia = document.querySelectorAll("li [data-continente = 'Asia']");
          paisesEuropa = document.querySelectorAll("li [data-continente = 'Europa']");
+         paises = querySelectorAll('li');
       });
       
       it("Hay diez li", () => {
@@ -36,7 +38,7 @@ describe("", function() {
       });
       
       it("Todos los li tienen un atributo data-continente", () => {
-        document.querySelectorAll('li')[0].should.have.attr('data-continente');
+        paises[0].should.have.attr('data-continente');
         document.querySelectorAll('li')[1].should.have.attr('data-continente');
         document.querySelectorAll('li')[2].should.have.attr('data-continente');
         document.querySelectorAll('li')[3].should.have.attr('data-continente');
@@ -50,7 +52,7 @@ describe("", function() {
       });
       
       
-      /*it("Si ingresamos el tercer animal por el prompt solo se muestra ese animal", () => {
+      /*it("Si ingresamos América se destacan los países que corresponden a América", () => {
         let terceraData = imagenes[2].getAttribute('data-animal');
         _stubPromptResponse_(terceraData);
         _resetDocument_();
