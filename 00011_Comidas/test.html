@@ -69,6 +69,36 @@ describe("", function() {
         bebidas[2].should.have.style("visibility", "hidden");
       });
       
+      it("Si ingresamos postres en el prompt se muestran solo las imagenes de postres", () => {
+        _stubPromptResponse_("comidas");
+        _resetDocument_();
+        cargarImagenes();
+        comidas[0].should.have.style("visibility", "hidden");
+        comidas[1].should.have.style("visibility", "hidden");
+        comidas[2].should.have.style("visibility", "hidden");
+        postres[0].should.have.style("visibility", "visible");
+        postres[1].should.have.style("visibility", "visible");
+        postres[2].should.have.style("visibility", "visible");
+        bebidas[0].should.have.style("visibility", "hidden");
+        bebidas[1].should.have.style("visibility", "hidden");
+        bebidas[2].should.have.style("visibility", "hidden");
+      });
+      
+      it("Si ingresamos bebidas en el prompt se muestran solo las imagenes de bebidas", () => {
+        _stubPromptResponse_("comidas");
+        _resetDocument_();
+        cargarImagenes();
+        comidas[0].should.have.style("visibility", "hidden");
+        comidas[1].should.have.style("visibility", "hidden");
+        comidas[2].should.have.style("visibility", "hidden");
+        postres[0].should.have.style("visibility", "hidden");
+        postres[1].should.have.style("visibility", "hidden");
+        postres[2].should.have.style("visibility", "hidden");
+        bebidas[0].should.have.style("visibility", "visible");
+        bebidas[1].should.have.style("visibility", "visible");
+        bebidas[2].should.have.style("visibility", "visible");
+      });
+      
     });
   });  
 });/*#tests>*/
