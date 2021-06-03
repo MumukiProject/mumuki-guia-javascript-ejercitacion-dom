@@ -15,9 +15,9 @@ describe("", function() {
       let li8;
       let li9;
       let li10;
-      beforeEach(() => {
-        function cargarLis() {
-        li1 = document.createElement('li');
+      
+      function cargarLis(){
+       li1 = document.createElement('li');
        li2 = document.createElement('li');
        li3 = document.createElement('li');
        li4 = document.createElement('li');
@@ -49,8 +49,9 @@ describe("", function() {
        li8.textContent= "Porque nadie viva en el silencio ni en la oscuridad";
        li9.textContent= "All your life you were only waiting for this moment to arise";
        li10.textContent= "Una voz antigua de viento y de sal";
-       
       }
+      beforeEach(() => {
+        cargarLis()
        _resetUserInteractions_();
       });
       
@@ -61,7 +62,7 @@ describe("", function() {
       it("Si ingresamos una palabra que se encuentra en dos li se destacan solo esos dos ítems", () => {
         _stubPromptResponse_("ser");
         _resetDocument_();
-        cargarLis();
+        ();
         document.querySelectorAll('li')[12].should.have.style('color','rgb(255, 0, 0)');
         //li1.should.have.style('font-weight','normal');
         //li2.should.have.style('color','rgb(0, 0, 0)');
