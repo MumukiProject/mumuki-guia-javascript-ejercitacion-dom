@@ -75,6 +75,15 @@ describe("", function() {
         paisesEuropa[1].should.have.style("color", "rgb(255, 0, 0)");
       });
       
+      it("Si ingresamos Europa se destacan los países que corresponden a Europa 2", () => {
+        _stubPromptResponse_("Europa");
+        _resetDocument_();
+        paisesEuropa[0].should.have.style("font-weight", "bold");
+        paisesEuropa[0].should.have.style("color", "rgb(255, 0, 0)");
+        paisesEuropa[1].should.have.style("font-weight", "bold");
+        paisesEuropa[1].should.have.style("color", "rgb(255, 0, 0)");
+      });
+      
       it("Prueba", () => {
         _stubPromptResponse_("América");
         _resetDocument_();
