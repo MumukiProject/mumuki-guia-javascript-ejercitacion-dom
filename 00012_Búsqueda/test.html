@@ -79,7 +79,12 @@ describe("", function() {
         //li9.should.have.style('font-weight','normal');
         //li10.should.have.style('font-weight','normal');
         });
-      
+      it("Prueba", () => {
+        _stubPromptResponse_("felicidad");
+        _resetDocument_();
+        
+        document.querySelectorAll("li")[0].should.have.style('font-weight','bold');
+      });
       
     });
   });  
