@@ -69,7 +69,6 @@ describe("", function() {
       });
       
       it("Prueba", () => {
-        _resetUserInteractions_();
         _stubPromptResponse_("América");
         _promptMessagesCount_().should.eql(1);
       });
