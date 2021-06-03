@@ -57,9 +57,9 @@ describe("", function() {
       });
 
       it("Si ingresamos una palabra que se encuentra en dos li se destacan solo esos dos ítems", () => {
-        _stubPromptResponse_("y");
+        _stubPromptResponse_("ser");
         _resetDocument_();
-        document.querySelectorAll('li')[8].should.have.style('color','rgb(255, 0, 0)');
+        document.querySelectorAll('li')[12].should.have.style('color','rgb(255, 0, 0)');
         //li1.should.have.style('font-weight','normal');
         //li2.should.have.style('color','rgb(0, 0, 0)');
         //li3.should.have.style('color','rgb(255, 0, 0)');
