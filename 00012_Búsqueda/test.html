@@ -13,7 +13,7 @@
       let li9;
       let li10;
       
-      /*function evaluarEstilos(li, palabra) {
+      function evaluarEstilos(li, palabra) {
         let palabras = li.textContent.split(' ');
         if(palabras.includes(palabra)) {
           li.should.have.style('font-weight','bold');
@@ -22,44 +22,8 @@
           li.should.have.style('font-weight','normal');
           li.should.have.style('color','rgb(0, 0, 0)');
         }
-      }*/
-      
-      function cargarLis(){
-       li1 = document.createElement('li');
-       li2 = document.createElement('li');
-       li3 = document.createElement('li');
-       li4 = document.createElement('li');
-       li5 = document.createElement('li');
-       li6 = document.createElement('li');
-       li7 = document.createElement('li');
-       li8 = document.createElement('li');
-       li9 = document.createElement('li');
-       li10 = document.createElement('li');
-       
-       document.body.appendChild(li1);
-       document.body.appendChild(li2);
-       document.body.appendChild(li3);
-       document.body.appendChild(li4);
-       document.body.appendChild(li5);
-       document.body.appendChild(li6);
-       document.body.appendChild(li7);
-       document.body.appendChild(li8);
-       document.body.appendChild(li9);
-       document.body.appendChild(li10);
-       
-       li1.textContent= "Everybody's Gotta Learn Sometimes";
-       li2.textContent= "No sabes cómo se siente temer este miedo mudo";
-       li3.textContent= "Volver a ser eso que pasa entre la uva y el vino";
-       li4.textContent= "La insoportable levedad del ser";
-       li5.textContent= "Everybody's Gotta Learn Sometimes";
-       li6.textContent= "Sheets of empty canvas untouched sheets of clay";
-       li7.textContent= "Quizás porque no soy un buen comerciante no pido nada a cambio de darte";
-       li8.textContent= "Porque nadie viva en el silencio ni en la oscuridad";
-       li9.textContent= "All your life you were only waiting for this moment to arise";
-       li10.textContent= "Una voz antigua de viento y de sal";
       }
       beforeEach(() => {
-        cargarLis()
        _resetUserInteractions_();
       });
       
@@ -67,24 +31,7 @@
         _originalDocument_.querySelectorAll("li").length.should.eql(10);
       });
 
-      it("Si ingresamos una palabra que se encuentra en dos li se destacan solo esos dos ítems", () => {
-        _stubPromptResponse_("ser");
-        _resetDocument_();
-        cargarLis();
-          document.querySelectorAll('li')[10].should.have.style('font-weight','normal');
-          //li2.should.have.style('color','rgb(0, 0, 0)');
-          document.querySelectorAll('li')[13].should.have.style('color','rgb(255, 0, 0)');
-          //li3.should.have.style('font-weight','bold');
-          //li4.should.have.style('color','rgb(255, 0, 0)');
-          //li4.should.have.style('font-weight','bold');
-          //li5.should.have.style('color','rgb(0, 0, 0)');
-          //li6.should.have.style('color','rgb(0, 0, 0)');
-          //li7.should.have.style('font-weight','normal');
-          //li8.should.have.style('color','rgb(0, 0, 0)');
-          //li9.should.have.style('font-weight','normal');
-          //li10.should.have.style('font-weight','normal');
-        });
-      /*it("Prueba", () => {
+      it("Prueba", () => {
         let lis = document.querySelectorAll("li");
         let palabras = lis[0].textContent.split(' ');
         _stubPromptResponse_(palabras[0]);
@@ -94,7 +41,7 @@
         for (i = 0; i < lis.length; i++) {
           evaluarEstilos(lis[i], palabras[0]);
         }
-      });*/
+      });
       
     });
   });  
