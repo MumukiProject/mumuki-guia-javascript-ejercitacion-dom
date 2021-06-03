@@ -16,7 +16,7 @@ describe("", function() {
       let paisesEuropa;
       beforeEach(() => {
         _resetUserInteractions_();
-         paisesAmerica = document.querySelectorAll("li [data-continente = 'América']");
+         paisesAmerica = document.querySelectorAll("li[data-continente='América']");
          paisesOceania = document.querySelectorAll("li [data-continente = 'Oceanía']");
          paisesAfrica = document.querySelectorAll("li [data-continente = 'África']");
          paisesAsia = document.querySelectorAll("li [data-continente = 'Asia']");
@@ -51,7 +51,7 @@ describe("", function() {
       
       
       it("Si ingresamos América se destacan los países que corresponden a América", () => {
-  
+        paisesAmerica.length.should.eql(2);
       });
       
     });
