@@ -21,6 +21,7 @@ describe("", function() {
        paisesAsia = document.querySelectorAll("li[data-continente='Asia']");
        paisesEuropa = document.querySelectorAll("li[data-continente='Europa']");
        _resetUserInteractions_();
+       _stubPromptResponse_("América");
       });
       
       it("Hay diez li", () => {
@@ -46,7 +47,6 @@ describe("", function() {
         document.querySelectorAll('li')[7].should.have.attr('data-continente');
         document.querySelectorAll('li')[8].should.have.attr('data-continente');
         document.querySelectorAll('li')[9].should.have.attr('data-continente');
-        _stubPromptResponse_("América");
       });
       
       it("Si ingresamos América se destacan los países que corresponden a América", () => {
