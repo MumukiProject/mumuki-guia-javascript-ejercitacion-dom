@@ -49,7 +49,6 @@ describe("", function() {
       });
       
       it("Si ingresamos América se destacan los países que corresponden a América", () => {
-        _resetUserInteractions_();
         _stubPromptResponse_("América");
         _resetDocument_();
         paisesAmerica[0].should.have.style("font-weight", "bold");
@@ -59,7 +58,6 @@ describe("", function() {
       });
       
       it("Si ingresamos América se destacan los países que corresponden a América 2", () => {
-        _resetUserInteractions_();
         _stubPromptResponse_("América");
         _resetDocument_();
         paisesAmerica[0].should.have.style("font-weight", "bold");
