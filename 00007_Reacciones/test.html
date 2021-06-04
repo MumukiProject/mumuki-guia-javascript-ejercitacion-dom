@@ -14,15 +14,15 @@ beforeEach(() => {
   })
   
   it("Hay un span con el ícono Me gusta", () => {
-    document.querySelectorAll("span i[class='fas fa-thumbs-up']").should.exist;
+    document.querySelectorAll("span")[0].should.have.trimmed.text("👍");
   })
   
   it("Hay un span con el ícono Me encanta", () => {
-    document.querySelectorAll("span i[class='far fa-heart']").should.exist;
+    document.querySelectorAll("span")[0].should.have.trimmed.text("❤️");
   })
   
   it("Hay un span con el ícono Me asombra", () => {
-    document.querySelectorAll("span i[class='far fa-surprise']").should.exist;
+    document.querySelectorAll("span")[0].should.have.trimmed.text("😮️");
   })
   
   it("La tipografía del texto es Poppins", () => {
@@ -48,9 +48,9 @@ beforeEach(() => {
     _stubPromptResponse_(6);
     _resetDocument_();
     
-    document.querySelectorAll("span")[0].should.have.trimmed.text("1");
-    document.querySelectorAll("span")[1].should.have.trimmed.text("2");
-    document.querySelectorAll("span")[2].should.have.trimmed.text("6");
+    document.querySelectorAll("span")[0].should.have.trimmed.text("👍 1");
+    document.querySelectorAll("span")[1].should.have.trimmed.text("❤ 2");
+    document.querySelectorAll("span")[2].should.have.trimmed.text("😮 6");
   });
   
   it("Si ingresamos 44 8 24 los span se actualizan mostrando esas reacciones", function() {
@@ -59,9 +59,9 @@ beforeEach(() => {
     _stubPromptResponse_(24);
     _resetDocument_();
     
-    document.querySelectorAll("span")[0].should.have.trimmed.text("44");
-    document.querySelectorAll("span")[1].should.have.trimmed.text("8");
-    document.querySelectorAll("span")[2].should.have.trimmed.text("24");
+    document.querySelectorAll("span")[0].should.have.trimmed.text("👍 44");
+    document.querySelectorAll("span")[1].should.have.trimmed.text("❤ 8");
+    document.querySelectorAll("span")[2].should.have.trimmed.text("😮 24");
   });/*#tests>*/
 /*<options#*/output_ignore_scripts: true
 output_ignore_styles: true/*#options>*/
