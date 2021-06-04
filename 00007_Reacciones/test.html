@@ -36,9 +36,13 @@ beforeEach(() => {
     _stubPromptResponse_(6);
     _resetDocument_();
     
-    document.querySelectorAll("span")[0].should.have.trimmed.text("👍  1");
-    document.querySelectorAll("span")[1].should.have.trimmed.text("❤ 2");
-    document.querySelectorAll("span")[2].should.have.trimmed.text("😮 6");
+    
+    document.querySelectorAll("span")[0].textContent.includes("👍");
+    document.querySelectorAll("span")[0].textContent.includes("1");
+    document.querySelectorAll("span")[1].textContent.includes("❤");
+    document.querySelectorAll("span")[1].textContent.includes("2");
+    document.querySelectorAll("span")[2].textContent.includes("😮");
+    document.querySelectorAll("span")[2].textContent.includes("6");
   });
   
   it("Si ingresamos 44 8 24 los span se actualizan mostrando esas reacciones", function() {
