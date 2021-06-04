@@ -4,7 +4,10 @@ Para ello previamente en un documento HTML haremos un post que contenga:
 - un `h3` con la usuaria;
 - un `p` con un `lorem ipsum`;
 - 3 `span`s de reacciones con un ícono más un número con la cantidad.
-- Los emojis que utilizaremos son :thumbsup: (me gusta), :heart: (me encanta) y :hushed: (me asombra).
+- Los emojis que utilizaremos son:
+  - 👍 (me gusta);
+  - ❤️ (me encanta);
+  - 😮 (me asombra).
 
 :warning: Consideraciones:
 
