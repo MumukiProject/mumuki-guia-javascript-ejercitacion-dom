@@ -13,18 +13,6 @@ beforeEach(() => {
     document.querySelector("p").should.exist;
   })
   
-  it("Hay un span con el ícono Me gusta", () => {
-    document.querySelectorAll("span")[0].should.have.trimmed.text("👍");
-  })
-  
-  it("Hay un span con el ícono Me encanta", () => {
-    document.querySelectorAll("span")[0].should.have.trimmed.text("❤️");
-  })
-  
-  it("Hay un span con el ícono Me asombra", () => {
-    document.querySelectorAll("span")[0].should.have.trimmed.text("😮️");
-  })
-  
   it("La tipografía del texto es Poppins", () => {
     document.querySelector("p").should.have.style('font-family', 'Poppins');
     document.querySelector("h3").should.have.style('font-family', 'Poppins');
@@ -48,7 +36,7 @@ beforeEach(() => {
     _stubPromptResponse_(6);
     _resetDocument_();
     
-    document.querySelectorAll("span")[0].should.have.trimmed.text("👍 1");
+    document.querySelectorAll("span")[0].should.have.trimmed.text("👍  1");
     document.querySelectorAll("span")[1].should.have.trimmed.text("❤ 2");
     document.querySelectorAll("span")[2].should.have.trimmed.text("😮 6");
   });
@@ -59,7 +47,7 @@ beforeEach(() => {
     _stubPromptResponse_(24);
     _resetDocument_();
     
-    document.querySelectorAll("span")[0].should.have.trimmed.text("👍 44");
+    document.querySelectorAll("span")[0].should.have.trimmed.text("👍  44");
     document.querySelectorAll("span")[1].should.have.trimmed.text("❤ 8");
     document.querySelectorAll("span")[2].should.have.trimmed.text("😮 24");
   });/*#tests>*/
