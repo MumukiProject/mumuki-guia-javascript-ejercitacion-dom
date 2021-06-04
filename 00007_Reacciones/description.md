@@ -8,6 +8,6 @@ Para ello previamente en un documento HTML haremos un post que contenga:
 :warning: Consideraciones:
 
 - la tipografía debe ser `Poppins` de Google Fonts;
-- los `spans` deben estar en línea, separados con márgenes de `15px`, tener un color de fondo gris suave y un border radius.
+- los `spans` deben estar en línea, separados con márgenes de `15px` Y tener color de fondo gris suave.
 
 > Creá el código HTML y JavaScript que acabamos de describir.
