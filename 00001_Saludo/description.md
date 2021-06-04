@@ -2,6 +2,6 @@ Para hacer interactivas nuestras páginas, queremos incorporar un saludo persona
 
 :warning: Consideraciones:
 
-el título `h1` debe estar centrado, tener un tamaño de `22px` y la tipografía de Google Fonts `Roboto`.
+el título `h1` debe tener un tamaño de `22px` y la tipografía de Google Fonts `Roboto`.
 
 > Creá el código HTML, JavaScript y CSS para lograr el comportamiento descripto.
